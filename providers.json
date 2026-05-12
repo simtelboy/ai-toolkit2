@@ -5,6 +5,7 @@
       "id": "2d06tu",
       "name": "英伟达",
       "base_url": "https://integrate.api.nvidia.com/v1",
+      "api_type": "openai",
       "register_url": "https://build.nvidia.com/explore/discover?modal=signin",
       "models": [
         "abacusai/dracarys-llama-3.1-70b-instruct",
@@ -93,6 +94,7 @@
       "id": "xpvlx1",
       "name": "Groq",
       "base_url": "https://api.groq.com/openai/v1",
+      "api_type": "openai",
       "register_url": "https://console.groq.com/",
       "models": [
         "qwen/qwen3-32b",
@@ -116,6 +118,7 @@
       "id": "3r1ens",
       "name": "谷歌",
       "base_url": "https://generativelanguage.googleapis.com/v1",
+      "api_type": "gemini",
       "register_url": "https://aistudio.google.com/prompts/new_chat",
       "models": [
         "models/gemini-2.5-flash (version: 001)",
@@ -143,7 +146,8 @@
         "tngtech/deepseek-r1t2-chimera:free",
         "arcee-ai/trinity-large-preview:free",
         "nvidia/llama-nemotron-embed-vl-1b-v2:free"
-      ]
+      ],
+      "api_type": "openai"
     },
     {
       "id": "1lm7n8",
@@ -159,7 +163,8 @@
         "stabilityai/stable-diffusion-2-1",
         "stabilityai/stable-diffusion-xl-base-1.0",
         "ByteDance/SDXL-Lightning"
-      ]
+      ],
+      "api_type": "openai"
     },
     {
       "id": "jde5o",
@@ -174,7 +179,8 @@
         "doubao-seedance-1.0-pro-fast",
         "doubao-seed-1.8-multimodal",
         "doubao-seed-character"
-      ]
+      ],
+      "api_type": "openai"
     }
   ]
 }
