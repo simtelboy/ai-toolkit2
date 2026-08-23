@@ -313,7 +313,7 @@ async function fetchSiliconflow(apiKey) {
 }
 
 async function fetchVolcengine(apiKey) {
-  const res = await fetch('https://ark.cn-beijing.volcengine.com/api/v3/models', {
+  const res = await fetch('https://ark.cn-beijing.volces.com/api/v3/models', {
     headers: { authorization: `Bearer ${apiKey}` },
   });
   if (!res.ok) throw new Error(`volcengine list models failed: ${res.status}`);
@@ -562,7 +562,7 @@ const PROVIDER_META = [
   {
     key: 'volcengine',
     envKeys: ['VOLCENGINE_API_KEY'],
-    baseUrl: 'https://ark.cn-beijing.volcengine.com/api/v3',
+    baseUrl: 'https://ark.cn-beijing.volces.com/api/v3',
     display: '火山引擎',
     registerUrl: 'https://console.volcengine.com/ark',
     fetch: fetchVolcengine,
