@@ -10,7 +10,7 @@ ToadPack（aiclient-guardian-rust）的在线模型目录仓库：`providers.jso
 同时产出 `audit.json`（含与上一期的新增/移除 diff），供 ToadPack 做「下架只标注不删除」的同步。
 
 **免费判据**：
-- 英伟达 / 谷歌 Gemini / OpenRouter / 硅基流动：移植自 [FreeModelFinder](https://github.com/orange90/FreeModelFinder) 核心层
+- 英伟达 / 谷歌 Gemini / OpenRouter / 硅基流动
 - Groq：平台不按模型计费（免费 tier 限速），目录全收录（排除音频/嵌入类）
 - 火山引擎：免费/试用 doubao 型号白名单 × 实时目录交集
 - deepseek：静态清单（官方无免费层）
