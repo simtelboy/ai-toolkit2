@@ -215,6 +215,42 @@
       "register_url": "https://platform.sensenova.cn/",
       "status": "skipped",
       "models": []
+    },
+    {
+      "id": "",
+      "name": "Cerebras",
+      "base_url": "https://api.cerebras.ai/v1",
+      "api_type": "openai",
+      "register_url": "https://cloud.cerebras.ai/",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "SambaNova",
+      "base_url": "https://api.sambanova.ai/v1",
+      "api_type": "openai",
+      "register_url": "https://cloud.sambanova.ai/",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "Mistral",
+      "base_url": "https://api.mistral.ai/v1",
+      "api_type": "openai",
+      "register_url": "https://console.mistral.ai/",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "OVHcloud",
+      "base_url": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+      "api_type": "openai",
+      "register_url": "https://endpoints.ai.cloud.ovh.net/",
+      "status": "skipped",
+      "models": []
     }
   ]
 }

@@ -14,6 +14,8 @@ ToadPack（aiclient-guardian-rust）的在线模型目录仓库：`providers.jso
   移植自 [FreeModelFinder](https://github.com/orange90/FreeModelFinder) 核心层
 - 智谱：官方免费 Flash 静态清单（GLM-4-Flash / GLM-4.7-Flash）
 - Groq：平台不按模型计费（免费 tier 限速），目录全收录（排除音频/嵌入类）
+- Cerebras / SambaNova / Mistral / OVHcloud：官方永久免费 tier（限速不限型号），
+  目录全收录（排除嵌入/重排/内容安全类）；2026-08 调研收录
 - 火山引擎：免费/试用 doubao 型号白名单 × 实时目录交集
 
 > GitHub Models 已于 2026-08 官方退休（目录端点 410 retirement brownout），不再收录。
@@ -27,7 +29,8 @@ ToadPack（aiclient-guardian-rust）的在线模型目录仓库：`providers.jso
 1. 在仓库 Settings → Secrets and variables → Actions 配置供应商 API 密钥
    （按需，未配置的自动跳过）：`NVIDIA_API_KEY`、`GROQ_API_KEY`、`GEMINI_API_KEY`、
    `OPENROUTER_API_KEY`、`SILICONFLOW_API_KEY`、`VOLCENGINE_API_KEY`、
-   `MODELSCOPE_API_KEY`、`COHERE_API_KEY`、`HUGGINGFACE_API_KEY`、`SENSENOVA_API_KEY`
+   `MODELSCOPE_API_KEY`、`COHERE_API_KEY`、`HUGGINGFACE_API_KEY`、`SENSENOVA_API_KEY`、
+   `CEREBRAS_API_KEY`、`SAMBANOVA_API_KEY`、`MISTRAL_API_KEY`、`OVH_API_KEY`
 2. Actions → Providers audit → Run workflow 手动触发一次，完成 providers.json v2 迁移与审计基线
 
 > 注：providers.json 的 `models` 由审计自动维护，请勿手工编辑（可通过扩展白名单常量维护判据）。

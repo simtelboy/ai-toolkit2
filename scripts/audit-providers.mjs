@@ -475,6 +475,38 @@ async function fetchSensenova(apiKey) {
   }));
 }
 
+// ---- 2026-08 新增：4 家官方永久免费 tier（用户拍板收录） ----
+// 判据统一为「目录全收录 + 排除工具模型」：这四家免费 tier 均不限模型（限速不限型号），
+// 与 Groq 同款口径。免费额度（2026-08 调研）：Cerebras ~100 万 tokens/天；
+// SambaNova 无限请求（10-30 RPM）；Mistral Experiment tier 全模型 ~10 亿 tokens/月；
+// OVHcloud AI Endpoints 匿名 2 RPM / 注册 400 RPM。
+
+// 工具模型排除（embedding/重排/内容安全等非对话模型不进清单）。
+const CATALOG_EXCLUDE_RE = /(?:embedding|embed-|rerank|moderation|guard|classifier)/i;
+
+/// OpenAI 兼容目录全收录抓取器工厂。
+function makeCatalogFetcher(key, url) {
+  return async (apiKey) => {
+    const res = await fetch(url, { headers: { authorization: `Bearer ${apiKey}` } });
+    if (!res.ok) throw new Error(`${key} list models failed: ${res.status}`);
+    const data = await res.json();
+    const raw = Array.isArray(data?.data) ? data.data : [];
+    if (raw.length === 0) throw new Error(`${key} list models returned empty data`);
+    const models = raw
+      .filter((m) => typeof m?.id === 'string' && m.id.trim().length > 0 && !CATALOG_EXCLUDE_RE.test(m.id))
+      .map((m) => ({ id: m.id, displayName: m.id, contextWindow: null }));
+    if (models.length === 0) {
+      throw new Error(`${key} list models returned ${raw.length} entries but none passed the chat filter`);
+    }
+    return models;
+  };
+}
+
+const fetchCerebras = makeCatalogFetcher('cerebras', 'https://api.cerebras.ai/v1/models');
+const fetchSambanova = makeCatalogFetcher('sambanova', 'https://api.sambanova.ai/v1/models');
+const fetchMistral = makeCatalogFetcher('mistral', 'https://api.mistral.ai/v1/models');
+const fetchOvhcloud = makeCatalogFetcher('ovhcloud', 'https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/models');
+
 // 审计键 → 抓取器（按 base_url 与上一期 providers.json 对齐，不依赖数组下标）。
 // display/registerUrl 是新增供应商的首期元数据（中文名、注册链接），
 // 上一期已存在时沿用上一期的 id/name/api_type/register_url。
@@ -567,6 +599,39 @@ const PROVIDER_META = [
     display: '商汤 SenseNova',
     registerUrl: 'https://platform.sensenova.cn/',
     fetch: fetchSensenova,
+  },
+  // ---- 2026-08 新增：4 家官方永久免费 tier ----
+  {
+    key: 'cerebras',
+    envKeys: ['CEREBRAS_API_KEY'],
+    baseUrl: 'https://api.cerebras.ai/v1',
+    display: 'Cerebras',
+    registerUrl: 'https://cloud.cerebras.ai/',
+    fetch: fetchCerebras,
+  },
+  {
+    key: 'sambanova',
+    envKeys: ['SAMBANOVA_API_KEY'],
+    baseUrl: 'https://api.sambanova.ai/v1',
+    display: 'SambaNova',
+    registerUrl: 'https://cloud.sambanova.ai/',
+    fetch: fetchSambanova,
+  },
+  {
+    key: 'mistral',
+    envKeys: ['MISTRAL_API_KEY'],
+    baseUrl: 'https://api.mistral.ai/v1',
+    display: 'Mistral',
+    registerUrl: 'https://console.mistral.ai/',
+    fetch: fetchMistral,
+  },
+  {
+    key: 'ovhcloud',
+    envKeys: ['OVH_API_KEY'],
+    baseUrl: 'https://oai.endpoints.kepler.ai.cloud.ovh.net/v1',
+    display: 'OVHcloud',
+    registerUrl: 'https://endpoints.ai.cloud.ovh.net/',
+    fetch: fetchOvhcloud,
   },
 ];
 

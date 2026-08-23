@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-08-23",
-  "generatedAt": "2026-08-23T11:05:18.261Z",
+  "generatedAt": "2026-08-23T11:08:12.468Z",
   "totalModels": 102,
   "providers": [
     {
@@ -593,6 +593,34 @@
     },
     {
       "id": "sensenova",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "cerebras",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "sambanova",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "mistral",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "ovhcloud",
       "status": "skipped",
       "count": 0,
       "error": null,
