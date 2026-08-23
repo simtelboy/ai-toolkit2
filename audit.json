@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-23",
+  "generatedAt": "2026-08-23T09:31:04.796Z",
+  "totalModels": 102,
+  "providers": [
+    {
+      "id": "nvidia",
+      "status": "skipped",
+      "count": 53,
+      "error": null,
+      "models": [
+        {
+          "id": "minimaxai/minimax-m3",
+          "displayName": "minimaxai/minimax-m3",
+          "contextWindow": null
+        },
+        {
+          "id": "google/diffusiongemma-26b-a4b-it",
+          "displayName": "google/diffusiongemma-26b-a4b-it",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3-ultra-550b-a55b",
+          "displayName": "nvidia/nemotron-3-ultra-550b-a55b",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3.5-content-safety",
+          "displayName": "nvidia/nemotron-3.5-content-safety",
+          "contextWindow": null
+        },
+        {
+          "id": "stepfun-ai/step-3.7-flash",
+          "displayName": "stepfun-ai/step-3.7-flash",
+          "contextWindow": null
+        },
+        {
+          "id": "moonshotai/kimi-k2.6",
+          "displayName": "moonshotai/kimi-k2.6",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/mistral-medium-3.5-128b",
+          "displayName": "mistralai/mistral-medium-3.5-128b",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+          "displayName": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+          "contextWindow": null
+        },
+        {
+          "id": "deepseek-ai/deepseek-v4-flash",
+          "displayName": "deepseek-ai/deepseek-v4-flash",
+          "contextWindow": null
+        },
+        {
+          "id": "deepseek-ai/deepseek-v4-pro",
+          "displayName": "deepseek-ai/deepseek-v4-pro",
+          "contextWindow": null
+        },
+        {
+          "id": "z-ai/glm-5.1",
+          "displayName": "z-ai/glm-5.1",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/ising-calibration-1-35b-a3b",
+          "displayName": "nvidia/ising-calibration-1-35b-a3b",
+          "contextWindow": null
+        },
+        {
+          "id": "minimaxai/minimax-m2.7",
+          "displayName": "minimaxai/minimax-m2.7",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-4-31b-it",
+          "displayName": "google/gemma-4-31b-it",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/mistral-small-4-119b-2603",
+          "displayName": "mistralai/mistral-small-4-119b-2603",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3-super-120b-a12b",
+          "displayName": "nvidia/nemotron-3-super-120b-a12b",
+          "contextWindow": null
+        },
+        {
+          "id": "qwen/qwen3.5-122b-a10b",
+          "displayName": "qwen/qwen3.5-122b-a10b",
+          "contextWindow": null
+        },
+        {
+          "id": "qwen/qwen3.5-397b-a17b",
+          "displayName": "qwen/qwen3.5-397b-a17b",
+          "contextWindow": null
+        },
+        {
+          "id": "stepfun-ai/step-3.5-flash",
+          "displayName": "stepfun-ai/step-3.5-flash",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3-nano-30b-a3b",
+          "displayName": "nvidia/nemotron-3-nano-30b-a3b",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/mistral-large-3-675b-instruct-2512",
+          "displayName": "mistralai/mistral-large-3-675b-instruct-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/ministral-14b-instruct-2512",
+          "displayName": "mistralai/ministral-14b-instruct-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-nano-12b-v2-vl",
+          "displayName": "nvidia/nemotron-nano-12b-v2-vl",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+          "displayName": "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+          "contextWindow": null
+        },
+        {
+          "id": "stockmark/stockmark-2-100b-instruct",
+          "displayName": "stockmark/stockmark-2-100b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "qwen/qwen3-next-80b-a3b-instruct",
+          "displayName": "qwen/qwen3-next-80b-a3b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "bytedance/seed-oss-36b-instruct",
+          "displayName": "bytedance/seed-oss-36b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nvidia-nemotron-nano-9b-v2",
+          "displayName": "nvidia/nvidia-nemotron-nano-9b-v2",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "displayName": "openai/gpt-oss-20b",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "displayName": "openai/gpt-oss-120b",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+          "displayName": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+          "contextWindow": null
+        },
+        {
+          "id": "sarvamai/sarvam-m",
+          "displayName": "sarvamai/sarvam-m",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-guard-4-12b",
+          "displayName": "meta/llama-guard-4-12b",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-3n-e4b-it",
+          "displayName": "google/gemma-3n-e4b-it",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-3n-e2b-it",
+          "displayName": "google/gemma-3n-e2b-it",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+          "displayName": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-4-maverick-17b-128e-instruct",
+          "displayName": "meta/llama-4-maverick-17b-128e-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
+          "displayName": "nvidia/llama-3.3-nemotron-super-49b-v1",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+          "displayName": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+          "contextWindow": null
+        },
+        {
+          "id": "microsoft/phi-4-mini-instruct",
+          "displayName": "microsoft/phi-4-mini-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "microsoft/phi-4-multimodal-instruct",
+          "displayName": "microsoft/phi-4-multimodal-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.3-70b-instruct",
+          "displayName": "meta/llama-3.3-70b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.2-3b-instruct",
+          "displayName": "meta/llama-3.2-3b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.2-11b-vision-instruct",
+          "displayName": "meta/llama-3.2-11b-vision-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.2-90b-vision-instruct",
+          "displayName": "meta/llama-3.2-90b-vision-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.2-1b-instruct",
+          "displayName": "meta/llama-3.2-1b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "abacusai/dracarys-llama-3.1-70b-instruct",
+          "displayName": "abacusai/dracarys-llama-3.1-70b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-mini-4b-instruct",
+          "displayName": "nvidia/nemotron-mini-4b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-2-2b-it",
+          "displayName": "google/gemma-2-2b-it",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.1-70b-instruct",
+          "displayName": "meta/llama-3.1-70b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta/llama-3.1-8b-instruct",
+          "displayName": "meta/llama-3.1-8b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "upstage/solar-10.7b-instruct",
+          "displayName": "upstage/solar-10.7b-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/mixtral-8x7b-instruct-v0.1",
+          "displayName": "mistralai/mixtral-8x7b-instruct-v0.1",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "groq",
+      "status": "skipped",
+      "count": 15,
+      "error": null,
+      "models": [
+        {
+          "id": "qwen/qwen3-32b",
+          "displayName": "qwen/qwen3-32b",
+          "contextWindow": null
+        },
+        {
+          "id": "canopylabs/orpheus-arabic-saudi",
+          "displayName": "canopylabs/orpheus-arabic-saudi",
+          "contextWindow": null
+        },
+        {
+          "id": "canopylabs/orpheus-v1-english",
+          "displayName": "canopylabs/orpheus-v1-english",
+          "contextWindow": null
+        },
+        {
+          "id": "groq/compound",
+          "displayName": "groq/compound",
+          "contextWindow": null
+        },
+        {
+          "id": "groq/compound-mini",
+          "displayName": "groq/compound-mini",
+          "contextWindow": null
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "displayName": "llama-3.1-8b-instant",
+          "contextWindow": null
+        },
+        {
+          "id": "llama-3.3-70b-versatile",
+          "displayName": "llama-3.3-70b-versatile",
+          "contextWindow": null
+        },
+        {
+          "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "displayName": "meta-llama/llama-4-scout-17b-16e-instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "meta-llama/llama-prompt-guard-2-22m",
+          "displayName": "meta-llama/llama-prompt-guard-2-22m",
+          "contextWindow": null
+        },
+        {
+          "id": "meta-llama/llama-prompt-guard-2-86m",
+          "displayName": "meta-llama/llama-prompt-guard-2-86m",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-120b",
+          "displayName": "openai/gpt-oss-120b",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-20b",
+          "displayName": "openai/gpt-oss-20b",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-safeguard-20b",
+          "displayName": "openai/gpt-oss-safeguard-20b",
+          "contextWindow": null
+        },
+        {
+          "id": "whisper-large-v3",
+          "displayName": "whisper-large-v3",
+          "contextWindow": null
+        },
+        {
+          "id": "whisper-large-v3-turbo",
+          "displayName": "whisper-large-v3-turbo",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "gemini",
+      "status": "skipped",
+      "count": 7,
+      "error": null,
+      "models": [
+        {
+          "id": "models/gemini-2.5-flash (version: 001)",
+          "displayName": "models/gemini-2.5-flash (version: 001)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.5-pro (version: 2.5)",
+          "displayName": "models/gemini-2.5-pro (version: 2.5)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.0-flash (version: 2.0)",
+          "displayName": "models/gemini-2.0-flash (version: 2.0)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.0-flash-001 (version: 2.0)",
+          "displayName": "models/gemini-2.0-flash-001 (version: 2.0)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.0-flash-lite-001 (version: 2.0)",
+          "displayName": "models/gemini-2.0-flash-lite-001 (version: 2.0)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.0-flash-lite (version: 2.0)",
+          "displayName": "models/gemini-2.0-flash-lite (version: 2.0)",
+          "contextWindow": null
+        },
+        {
+          "id": "models/gemini-2.5-flash-lite (version: 001)",
+          "displayName": "models/gemini-2.5-flash-lite (version: 001)",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "openrouter",
+      "status": "skipped",
+      "count": 10,
+      "error": null,
+      "models": [
+        {
+          "id": "openrouter/free",
+          "displayName": "openrouter/free",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-20b:free",
+          "displayName": "openai/gpt-oss-20b:free",
+          "contextWindow": null
+        },
+        {
+          "id": "openai/gpt-oss-120b:free",
+          "displayName": "openai/gpt-oss-120b:free",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-3-27b-it:free",
+          "displayName": "google/gemma-3-27b-it:free",
+          "contextWindow": null
+        },
+        {
+          "id": "google/gemma-4-31b-it:free",
+          "displayName": "google/gemma-4-31b-it:free",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/nemotron-3-super:free",
+          "displayName": "nvidia/nemotron-3-super:free",
+          "contextWindow": null
+        },
+        {
+          "id": "tngtech/tng-r1t-chimera:free",
+          "displayName": "tngtech/tng-r1t-chimera:free",
+          "contextWindow": null
+        },
+        {
+          "id": "tngtech/deepseek-r1t2-chimera:free",
+          "displayName": "tngtech/deepseek-r1t2-chimera:free",
+          "contextWindow": null
+        },
+        {
+          "id": "arcee-ai/trinity-large-preview:free",
+          "displayName": "arcee-ai/trinity-large-preview:free",
+          "contextWindow": null
+        },
+        {
+          "id": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "displayName": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "siliconflow",
+      "status": "skipped",
+      "count": 8,
+      "error": null,
+      "models": [
+        {
+          "id": "Qwen/Qwen2-7B-Instruct",
+          "displayName": "Qwen/Qwen2-7B-Instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "Qwen/Qwen1.5-7B-Chat",
+          "displayName": "Qwen/Qwen1.5-7B-Chat",
+          "contextWindow": null
+        },
+        {
+          "id": "THUDM/glm-4-9b-chat",
+          "displayName": "THUDM/glm-4-9b-chat",
+          "contextWindow": null
+        },
+        {
+          "id": "mistralai/Mistral-7B-Instruct-v0.2",
+          "displayName": "mistralai/Mistral-7B-Instruct-v0.2",
+          "contextWindow": null
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+          "displayName": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "stabilityai/stable-diffusion-2-1",
+          "displayName": "stabilityai/stable-diffusion-2-1",
+          "contextWindow": null
+        },
+        {
+          "id": "stabilityai/stable-diffusion-xl-base-1.0",
+          "displayName": "stabilityai/stable-diffusion-xl-base-1.0",
+          "contextWindow": null
+        },
+        {
+          "id": "ByteDance/SDXL-Lightning",
+          "displayName": "ByteDance/SDXL-Lightning",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "volcengine",
+      "status": "skipped",
+      "count": 7,
+      "error": null,
+      "models": [
+        {
+          "id": "doubao-lite-1.6-flash-20250415",
+          "displayName": "doubao-lite-1.6-flash-20250415",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-pro-1.8-20250610",
+          "displayName": "doubao-pro-1.8-20250610",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-seed-1.6-lite",
+          "displayName": "doubao-seed-1.6-lite",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-pro-code-1.5",
+          "displayName": "doubao-pro-code-1.5",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-seedance-1.0-pro-fast",
+          "displayName": "doubao-seedance-1.0-pro-fast",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-seed-1.8-multimodal",
+          "displayName": "doubao-seed-1.8-multimodal",
+          "contextWindow": null
+        },
+        {
+          "id": "doubao-seed-character",
+          "displayName": "doubao-seed-character",
+          "contextWindow": null
+        }
+      ]
+    },
+    {
+      "id": "deepseek",
+      "status": "ok",
+      "count": 2,
+      "error": null,
+      "models": [
+        {
+          "id": "deepseek-v4-flash",
+          "displayName": "deepseek-v4-flash",
+          "contextWindow": 1048576
+        },
+        {
+          "id": "deepseek-v4-pro",
+          "displayName": "deepseek-v4-pro",
+          "contextWindow": 1048576
+        }
+      ]
+    }
+  ],
+  "changes": {
+    "comparedWith": null,
+    "added": [],
+    "removed": []
+  }
+}

@@ -1,5 +1,6 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "audited_at": "2026-08-23",
   "providers": [
     {
       "id": "2d06tu",
@@ -7,6 +8,7 @@
       "base_url": "https://integrate.api.nvidia.com/v1",
       "api_type": "openai",
       "register_url": "https://build.nvidia.com/explore/discover?modal=signin",
+      "status": "skipped",
       "models": [
         "minimaxai/minimax-m3",
         "google/diffusiongemma-26b-a4b-it",
@@ -69,6 +71,7 @@
       "base_url": "https://api.groq.com/openai/v1",
       "api_type": "openai",
       "register_url": "https://console.groq.com/",
+      "status": "skipped",
       "models": [
         "qwen/qwen3-32b",
         "canopylabs/orpheus-arabic-saudi",
@@ -93,6 +96,7 @@
       "base_url": "https://generativelanguage.googleapis.com/v1",
       "api_type": "gemini",
       "register_url": "https://aistudio.google.com/prompts/new_chat",
+      "status": "skipped",
       "models": [
         "models/gemini-2.5-flash (version: 001)",
         "models/gemini-2.5-pro (version: 2.5)",
@@ -107,7 +111,9 @@
       "id": "jg5ss",
       "name": "openrouter",
       "base_url": "https://openrouter.ai/api/v1",
+      "api_type": "openai",
       "register_url": "https://openrouter.ai/",
+      "status": "skipped",
       "models": [
         "openrouter/free",
         "openai/gpt-oss-20b:free",
@@ -119,14 +125,15 @@
         "tngtech/deepseek-r1t2-chimera:free",
         "arcee-ai/trinity-large-preview:free",
         "nvidia/llama-nemotron-embed-vl-1b-v2:free"
-      ],
-      "api_type": "openai"
+      ]
     },
     {
       "id": "1lm7n8",
       "name": "硅基流动",
       "base_url": "https://api.siliconflow.cn/v1",
+      "api_type": "openai",
       "register_url": "https://cloud.siliconflow.cn/",
+      "status": "skipped",
       "models": [
         "Qwen/Qwen2-7B-Instruct",
         "Qwen/Qwen1.5-7B-Chat",
@@ -136,14 +143,15 @@
         "stabilityai/stable-diffusion-2-1",
         "stabilityai/stable-diffusion-xl-base-1.0",
         "ByteDance/SDXL-Lightning"
-      ],
-      "api_type": "openai"
+      ]
     },
     {
       "id": "jde5o",
       "name": "火山引擎",
       "base_url": "https://ark.cn-beijing.volcengine.com/api/v3",
+      "api_type": "openai",
       "register_url": "https://console.volcengine.com/ark",
+      "status": "skipped",
       "models": [
         "doubao-lite-1.6-flash-20250415",
         "doubao-pro-1.8-20250610",
@@ -152,8 +160,7 @@
         "doubao-seedance-1.0-pro-fast",
         "doubao-seed-1.8-multimodal",
         "doubao-seed-character"
-      ],
-      "api_type": "openai"
+      ]
     },
     {
       "id": "7hqdk",
@@ -161,6 +168,7 @@
       "base_url": "https://api.deepseek.com/anthropic",
       "api_type": "anthropic",
       "register_url": "https://chat.deepseek.com/sign_up",
+      "status": "ok",
       "models": [
         {
           "name": "deepseek-v4-flash",
