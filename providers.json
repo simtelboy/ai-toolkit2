@@ -176,16 +176,13 @@
       "base_url": "https://api.siliconflow.cn/v1",
       "api_type": "openai",
       "register_url": "https://cloud.siliconflow.cn/",
-      "status": "skipped",
+      "status": "ok",
       "models": [
-        "Qwen/Qwen2-7B-Instruct",
-        "Qwen/Qwen1.5-7B-Chat",
-        "THUDM/glm-4-9b-chat",
-        "mistralai/Mistral-7B-Instruct-v0.2",
-        "deepseek-ai/DeepSeek-Coder-V2-Instruct",
-        "stabilityai/stable-diffusion-2-1",
-        "stabilityai/stable-diffusion-xl-base-1.0",
-        "ByteDance/SDXL-Lightning"
+        "Qwen/Qwen2.5-7B-Instruct",
+        "Qwen/Qwen3-8B",
+        "tencent/Hunyuan-MT-7B",
+        "THUDM/GLM-4-9B-0414",
+        "THUDM/GLM-Z1-9B-0414"
       ]
     },
     {
@@ -194,7 +191,7 @@
       "base_url": "https://ark.cn-beijing.volcengine.com/api/v3",
       "api_type": "openai",
       "register_url": "https://console.volcengine.com/ark",
-      "status": "skipped",
+      "status": "error",
       "models": [
         "doubao-lite-1.6-flash-20250415",
         "doubao-pro-1.8-20250610",
@@ -238,8 +235,13 @@
       "base_url": "https://api.cohere.ai/compatibility/v1",
       "api_type": "openai",
       "register_url": "https://dashboard.cohere.com/welcome/register",
-      "status": "skipped",
-      "models": []
+      "status": "ok",
+      "models": [
+        {
+          "name": "north-mini-code-1-0",
+          "context_window": 436000
+        }
+      ]
     },
     {
       "id": "",
@@ -247,8 +249,17 @@
       "base_url": "https://router.huggingface.co/v1",
       "api_type": "openai",
       "register_url": "https://huggingface.co/join",
-      "status": "skipped",
-      "models": []
+      "status": "ok",
+      "models": [
+        {
+          "name": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
+          "context_window": 262144
+        },
+        {
+          "name": "prism-ml/Ternary-Bonsai-27B-gguf",
+          "context_window": 262144
+        }
+      ]
     },
     {
       "id": "",
@@ -256,8 +267,13 @@
       "base_url": "https://token.sensenova.cn/v1",
       "api_type": "openai",
       "register_url": "https://platform.sensenova.cn/",
-      "status": "skipped",
-      "models": []
+      "status": "ok",
+      "models": [
+        "deepseek-v4-flash",
+        "glm-5.2",
+        "sensenova-6.7-flash-lite",
+        "sensenova-6.8-flash-lite"
+      ]
     },
     {
       "id": "",
@@ -277,8 +293,16 @@
       "base_url": "https://api.sambanova.ai/v1",
       "api_type": "openai",
       "register_url": "https://cloud.sambanova.ai/",
-      "status": "skipped",
-      "models": []
+      "status": "ok",
+      "models": [
+        "DeepSeek-V3.1",
+        "DeepSeek-V3.2",
+        "gemma-4-31B-it",
+        "gpt-oss-120b",
+        "Meta-Llama-3.3-70B-Instruct",
+        "MiniMax-M2.7",
+        "MiniMax-M3"
+      ]
     },
     {
       "id": "",
@@ -286,8 +310,62 @@
       "base_url": "https://api.mistral.ai/v1",
       "api_type": "openai",
       "register_url": "https://console.mistral.ai/",
-      "status": "skipped",
-      "models": []
+      "status": "ok",
+      "models": [
+        "codestral-2508",
+        "codestral-embed",
+        "codestral-latest",
+        "devstral-2512",
+        "devstral-latest",
+        "devstral-medium-latest",
+        "glm-5-2",
+        "labs-leanstral-1-5",
+        "labs-leanstral-1-5-1",
+        "magistral-medium-latest",
+        "magistral-small-latest",
+        "ministral-14b-2512",
+        "ministral-14b-latest",
+        "ministral-3b-2512",
+        "ministral-3b-latest",
+        "ministral-8b-2512",
+        "ministral-8b-latest",
+        "mistral-code-agent-latest",
+        "mistral-code-fim-latest",
+        "mistral-code-latest",
+        "mistral-embed",
+        "mistral-large-2512",
+        "mistral-large-latest",
+        "mistral-medium",
+        "mistral-medium-2505",
+        "mistral-medium-2508",
+        "mistral-medium-2604",
+        "mistral-medium-3",
+        "mistral-medium-3-5",
+        "mistral-medium-3.5",
+        "mistral-medium-latest",
+        "mistral-ocr-2512",
+        "mistral-ocr-3",
+        "mistral-ocr-3-0",
+        "mistral-ocr-4",
+        "mistral-ocr-4-0",
+        "mistral-ocr-4-1",
+        "mistral-ocr-latest",
+        "mistral-small-2603",
+        "mistral-small-latest",
+        "mistral-vibe-cli-fast",
+        "mistral-vibe-cli-latest",
+        "mistral-vibe-cli-with-tools",
+        "voxtral-mini-2602",
+        "voxtral-mini-latest",
+        "voxtral-mini-realtime-2602",
+        "voxtral-mini-realtime-latest",
+        "voxtral-mini-transcribe-realtime-2602",
+        "voxtral-mini-tts-2603",
+        "voxtral-mini-tts-latest",
+        "voxtral-small-2507",
+        "voxtral-small-latest",
+        "zai-glm-5-2"
+      ]
     },
     {
       "id": "",

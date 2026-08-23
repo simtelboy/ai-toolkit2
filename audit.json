@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "date": "2026-08-24",
-  "generatedAt": "2026-08-23T21:55:12.037Z",
-  "totalModels": 78,
+  "generatedAt": "2026-08-23T22:23:49.074Z",
+  "totalModels": 142,
   "providers": [
     {
       "id": "nvidia",
@@ -333,57 +333,42 @@
     },
     {
       "id": "siliconflow",
-      "status": "skipped",
-      "count": 8,
+      "status": "ok",
+      "count": 5,
       "error": null,
       "models": [
         {
-          "id": "Qwen/Qwen2-7B-Instruct",
-          "displayName": "Qwen/Qwen2-7B-Instruct",
+          "id": "Qwen/Qwen2.5-7B-Instruct",
+          "displayName": "Qwen/Qwen2.5-7B-Instruct",
           "contextWindow": null
         },
         {
-          "id": "Qwen/Qwen1.5-7B-Chat",
-          "displayName": "Qwen/Qwen1.5-7B-Chat",
+          "id": "Qwen/Qwen3-8B",
+          "displayName": "Qwen/Qwen3-8B",
           "contextWindow": null
         },
         {
-          "id": "THUDM/glm-4-9b-chat",
-          "displayName": "THUDM/glm-4-9b-chat",
+          "id": "tencent/Hunyuan-MT-7B",
+          "displayName": "tencent/Hunyuan-MT-7B",
           "contextWindow": null
         },
         {
-          "id": "mistralai/Mistral-7B-Instruct-v0.2",
-          "displayName": "mistralai/Mistral-7B-Instruct-v0.2",
+          "id": "THUDM/GLM-4-9B-0414",
+          "displayName": "THUDM/GLM-4-9B-0414",
           "contextWindow": null
         },
         {
-          "id": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
-          "displayName": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "stabilityai/stable-diffusion-2-1",
-          "displayName": "stabilityai/stable-diffusion-2-1",
-          "contextWindow": null
-        },
-        {
-          "id": "stabilityai/stable-diffusion-xl-base-1.0",
-          "displayName": "stabilityai/stable-diffusion-xl-base-1.0",
-          "contextWindow": null
-        },
-        {
-          "id": "ByteDance/SDXL-Lightning",
-          "displayName": "ByteDance/SDXL-Lightning",
+          "id": "THUDM/GLM-Z1-9B-0414",
+          "displayName": "THUDM/GLM-Z1-9B-0414",
           "contextWindow": null
         }
       ]
     },
     {
       "id": "volcengine",
-      "status": "skipped",
+      "status": "error",
       "count": 7,
-      "error": null,
+      "error": "fetch failed",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -449,24 +434,62 @@
     },
     {
       "id": "cohere",
-      "status": "skipped",
-      "count": 0,
+      "status": "ok",
+      "count": 1,
       "error": null,
-      "models": []
+      "models": [
+        {
+          "id": "north-mini-code-1-0",
+          "displayName": "north-mini-code-1-0",
+          "contextWindow": 436000
+        }
+      ]
     },
     {
       "id": "huggingface",
-      "status": "skipped",
-      "count": 0,
+      "status": "ok",
+      "count": 2,
       "error": null,
-      "models": []
+      "models": [
+        {
+          "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
+          "displayName": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
+          "contextWindow": 262144
+        },
+        {
+          "id": "prism-ml/Ternary-Bonsai-27B-gguf",
+          "displayName": "prism-ml/Ternary-Bonsai-27B-gguf",
+          "contextWindow": 262144
+        }
+      ]
     },
     {
       "id": "sensenova",
-      "status": "skipped",
-      "count": 0,
+      "status": "ok",
+      "count": 4,
       "error": null,
-      "models": []
+      "models": [
+        {
+          "id": "deepseek-v4-flash",
+          "displayName": "deepseek-v4-flash",
+          "contextWindow": null
+        },
+        {
+          "id": "glm-5.2",
+          "displayName": "glm-5.2",
+          "contextWindow": null
+        },
+        {
+          "id": "sensenova-6.7-flash-lite",
+          "displayName": "sensenova-6.7-flash-lite",
+          "contextWindow": null
+        },
+        {
+          "id": "sensenova-6.8-flash-lite",
+          "displayName": "sensenova-6.8-flash-lite",
+          "contextWindow": null
+        }
+      ]
     },
     {
       "id": "cerebras",
@@ -488,17 +511,319 @@
     },
     {
       "id": "sambanova",
-      "status": "skipped",
-      "count": 0,
+      "status": "ok",
+      "count": 7,
       "error": null,
-      "models": []
+      "models": [
+        {
+          "id": "DeepSeek-V3.1",
+          "displayName": "DeepSeek-V3.1",
+          "contextWindow": null
+        },
+        {
+          "id": "DeepSeek-V3.2",
+          "displayName": "DeepSeek-V3.2",
+          "contextWindow": null
+        },
+        {
+          "id": "gemma-4-31B-it",
+          "displayName": "gemma-4-31B-it",
+          "contextWindow": null
+        },
+        {
+          "id": "gpt-oss-120b",
+          "displayName": "gpt-oss-120b",
+          "contextWindow": null
+        },
+        {
+          "id": "Meta-Llama-3.3-70B-Instruct",
+          "displayName": "Meta-Llama-3.3-70B-Instruct",
+          "contextWindow": null
+        },
+        {
+          "id": "MiniMax-M2.7",
+          "displayName": "MiniMax-M2.7",
+          "contextWindow": null
+        },
+        {
+          "id": "MiniMax-M3",
+          "displayName": "MiniMax-M3",
+          "contextWindow": null
+        }
+      ]
     },
     {
       "id": "mistral",
-      "status": "skipped",
-      "count": 0,
+      "status": "ok",
+      "count": 53,
       "error": null,
-      "models": []
+      "models": [
+        {
+          "id": "codestral-2508",
+          "displayName": "codestral-2508",
+          "contextWindow": null
+        },
+        {
+          "id": "codestral-embed",
+          "displayName": "codestral-embed",
+          "contextWindow": null
+        },
+        {
+          "id": "codestral-latest",
+          "displayName": "codestral-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "devstral-2512",
+          "displayName": "devstral-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "devstral-latest",
+          "displayName": "devstral-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "devstral-medium-latest",
+          "displayName": "devstral-medium-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "glm-5-2",
+          "displayName": "glm-5-2",
+          "contextWindow": null
+        },
+        {
+          "id": "labs-leanstral-1-5",
+          "displayName": "labs-leanstral-1-5",
+          "contextWindow": null
+        },
+        {
+          "id": "labs-leanstral-1-5-1",
+          "displayName": "labs-leanstral-1-5-1",
+          "contextWindow": null
+        },
+        {
+          "id": "magistral-medium-latest",
+          "displayName": "magistral-medium-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "magistral-small-latest",
+          "displayName": "magistral-small-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-14b-2512",
+          "displayName": "ministral-14b-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-14b-latest",
+          "displayName": "ministral-14b-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-3b-2512",
+          "displayName": "ministral-3b-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-3b-latest",
+          "displayName": "ministral-3b-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-8b-2512",
+          "displayName": "ministral-8b-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "ministral-8b-latest",
+          "displayName": "ministral-8b-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-code-agent-latest",
+          "displayName": "mistral-code-agent-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-code-fim-latest",
+          "displayName": "mistral-code-fim-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-code-latest",
+          "displayName": "mistral-code-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-embed",
+          "displayName": "mistral-embed",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-large-2512",
+          "displayName": "mistral-large-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-large-latest",
+          "displayName": "mistral-large-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium",
+          "displayName": "mistral-medium",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-2505",
+          "displayName": "mistral-medium-2505",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-2508",
+          "displayName": "mistral-medium-2508",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-2604",
+          "displayName": "mistral-medium-2604",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-3",
+          "displayName": "mistral-medium-3",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-3-5",
+          "displayName": "mistral-medium-3-5",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-3.5",
+          "displayName": "mistral-medium-3.5",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-medium-latest",
+          "displayName": "mistral-medium-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-2512",
+          "displayName": "mistral-ocr-2512",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-3",
+          "displayName": "mistral-ocr-3",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-3-0",
+          "displayName": "mistral-ocr-3-0",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-4",
+          "displayName": "mistral-ocr-4",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-4-0",
+          "displayName": "mistral-ocr-4-0",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-4-1",
+          "displayName": "mistral-ocr-4-1",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-ocr-latest",
+          "displayName": "mistral-ocr-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-small-2603",
+          "displayName": "mistral-small-2603",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-small-latest",
+          "displayName": "mistral-small-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-vibe-cli-fast",
+          "displayName": "mistral-vibe-cli-fast",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-vibe-cli-latest",
+          "displayName": "mistral-vibe-cli-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-vibe-cli-with-tools",
+          "displayName": "mistral-vibe-cli-with-tools",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-2602",
+          "displayName": "voxtral-mini-2602",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-latest",
+          "displayName": "voxtral-mini-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-realtime-2602",
+          "displayName": "voxtral-mini-realtime-2602",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-realtime-latest",
+          "displayName": "voxtral-mini-realtime-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-transcribe-realtime-2602",
+          "displayName": "voxtral-mini-transcribe-realtime-2602",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-tts-2603",
+          "displayName": "voxtral-mini-tts-2603",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-mini-tts-latest",
+          "displayName": "voxtral-mini-tts-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-small-2507",
+          "displayName": "voxtral-small-2507",
+          "contextWindow": null
+        },
+        {
+          "id": "voxtral-small-latest",
+          "displayName": "voxtral-small-latest",
+          "contextWindow": null
+        },
+        {
+          "id": "zai-glm-5-2",
+          "displayName": "zai-glm-5-2",
+          "contextWindow": null
+        }
+      ]
     },
     {
       "id": "ovhcloud",
@@ -509,7 +834,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-08-23",
+    "comparedWith": "2026-08-24",
     "added": [
       {
         "provider": "nvidia",
@@ -748,6 +1073,26 @@
         "id": "z-ai/glm-5.2:free"
       },
       {
+        "provider": "siliconflow",
+        "id": "Qwen/Qwen2.5-7B-Instruct"
+      },
+      {
+        "provider": "siliconflow",
+        "id": "Qwen/Qwen3-8B"
+      },
+      {
+        "provider": "siliconflow",
+        "id": "tencent/Hunyuan-MT-7B"
+      },
+      {
+        "provider": "siliconflow",
+        "id": "THUDM/GLM-4-9B-0414"
+      },
+      {
+        "provider": "siliconflow",
+        "id": "THUDM/GLM-Z1-9B-0414"
+      },
+      {
         "provider": "zhipu",
         "id": "glm-4-flash"
       },
@@ -756,12 +1101,280 @@
         "id": "glm-4.7-flash"
       },
       {
+        "provider": "cohere",
+        "id": "north-mini-code-1-0"
+      },
+      {
+        "provider": "huggingface",
+        "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit"
+      },
+      {
+        "provider": "huggingface",
+        "id": "prism-ml/Ternary-Bonsai-27B-gguf"
+      },
+      {
+        "provider": "sensenova",
+        "id": "deepseek-v4-flash"
+      },
+      {
+        "provider": "sensenova",
+        "id": "glm-5.2"
+      },
+      {
+        "provider": "sensenova",
+        "id": "sensenova-6.7-flash-lite"
+      },
+      {
+        "provider": "sensenova",
+        "id": "sensenova-6.8-flash-lite"
+      },
+      {
         "provider": "cerebras",
         "id": "gemma-4-31b"
       },
       {
         "provider": "cerebras",
         "id": "gpt-oss-120b"
+      },
+      {
+        "provider": "sambanova",
+        "id": "DeepSeek-V3.1"
+      },
+      {
+        "provider": "sambanova",
+        "id": "DeepSeek-V3.2"
+      },
+      {
+        "provider": "sambanova",
+        "id": "gemma-4-31B-it"
+      },
+      {
+        "provider": "sambanova",
+        "id": "gpt-oss-120b"
+      },
+      {
+        "provider": "sambanova",
+        "id": "Meta-Llama-3.3-70B-Instruct"
+      },
+      {
+        "provider": "sambanova",
+        "id": "MiniMax-M2.7"
+      },
+      {
+        "provider": "sambanova",
+        "id": "MiniMax-M3"
+      },
+      {
+        "provider": "mistral",
+        "id": "codestral-2508"
+      },
+      {
+        "provider": "mistral",
+        "id": "codestral-embed"
+      },
+      {
+        "provider": "mistral",
+        "id": "codestral-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "devstral-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "devstral-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "devstral-medium-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "glm-5-2"
+      },
+      {
+        "provider": "mistral",
+        "id": "labs-leanstral-1-5"
+      },
+      {
+        "provider": "mistral",
+        "id": "labs-leanstral-1-5-1"
+      },
+      {
+        "provider": "mistral",
+        "id": "magistral-medium-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "magistral-small-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-14b-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-14b-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-3b-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-3b-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-8b-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "ministral-8b-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-code-agent-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-code-fim-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-code-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-embed"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-large-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-large-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-2505"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-2508"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-2604"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-3"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-3-5"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-3.5"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-medium-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-2512"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-3"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-3-0"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-4"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-4-0"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-4-1"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-ocr-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-small-2603"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-small-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-vibe-cli-fast"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-vibe-cli-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-vibe-cli-with-tools"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-2602"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-realtime-2602"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-realtime-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-transcribe-realtime-2602"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-tts-2603"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-mini-tts-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-small-2507"
+      },
+      {
+        "provider": "mistral",
+        "id": "voxtral-small-latest"
+      },
+      {
+        "provider": "mistral",
+        "id": "zai-glm-5-2"
       }
     ],
     "removed": []
