@@ -9,9 +9,9 @@ ToadPack（aiclient-guardian-rust）的在线模型目录仓库：`providers.jso
 拉取各供应商实时模型目录并按免费判据过滤，自动刷新 `providers.json` 的 `models` 数组，
 同时产出 `audit.json`（含与上一期的新增/移除 diff），供 ToadPack 做「下架只标注不删除」的同步。
 
-**免费判据**（覆盖 FreeModelFinder 的 9 个仍存续 Provider + 自维护 3 个）：
+**免费判据**（判据来源：9 家移植自 FreeModelFinder，其余为本仓库自定；**全部参与每 3 天实时目录审计**，仅智谱为静态清单不拉目录）：
 - 英伟达 / 谷歌 Gemini / OpenRouter / 硅基流动 / 魔搭 / Cohere / Hugging Face / 商汤 SenseNova：
-  移植自 [FreeModelFinder](https://github.com/orange90/FreeModelFinder) 核心层
+  判据移植自 [FreeModelFinder](https://github.com/orange90/FreeModelFinder) 核心层
 - 智谱：官方免费 Flash 静态清单（GLM-4-Flash / GLM-4.7-Flash）
 - Groq：平台不按模型计费（免费 tier 限速），目录全收录（排除音频/嵌入类）
 - Cerebras / SambaNova / Mistral / OVHcloud：官方永久免费 tier（限速不限型号），
