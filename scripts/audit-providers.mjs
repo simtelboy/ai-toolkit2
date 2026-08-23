@@ -530,9 +530,17 @@ const PROVIDER_META = [
   {
     key: 'gemini',
     envKeys: ['GEMINI_API_KEY', 'GOOGLE_API_KEY'],
-    baseUrl: 'https://generativelanguage.googleapis.com/v1',
+    // 官方 OpenAI 兼容端点（2026-08 实测 200 可用）：ToadPack 客户端拼
+    // {base_url}/chat/completions → /v1beta/openai/v1/chat/completions。
+    // 目录审计仍走 v1beta/models（fetchGemini 内硬编码，与 base_url 无关）。
+    baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai/v1',
+    // 协议切换：客户端从此按 OpenAI 协议调用（官方兼容端点），覆盖旧 api_type=gemini。
+    apiType: 'openai',
     display: '谷歌',
     registerUrl: 'https://aistudio.google.com/prompts/new_chat',
+    // 未配密钥时用官方 Free Tier 白名单作静态回退（纯模型名，可直接调用），
+    // 配了密钥后改为「白名单 × 实时目录交集」验证。
+    staticFallback: GEMINI_FREE_ALLOW_LIST.map((id) => ({ id, contextWindow: null })),
     fetch: fetchGemini,
   },
   {
@@ -701,11 +709,16 @@ async function main() {
     previous = null;
   }
   const previousByBaseUrl = new Map();
+  const previousByName = new Map();
   if (Array.isArray(previous?.providers)) {
     for (const p of previous.providers) {
       if (p?.base_url) previousByBaseUrl.set(p.base_url, p);
+      if (p?.name) previousByName.set(p.name, p);
     }
   }
+  // 上一期匹配：优先按 base_url；base_url 变更（如 gemini 切换官方 OpenAI 兼容端点）时
+  // 按显示名兜底，保证清单沿用不断链。
+  const findPrevious = (meta) => previousByBaseUrl.get(meta.baseUrl) ?? previousByName.get(meta.display) ?? null;
   // 上一期 audit.json（用于 added/removed diff）。
   let previousAudit;
   try {
@@ -716,7 +729,7 @@ async function main() {
 
   const results = [];
   for (const meta of PROVIDER_META) {
-    const prevProvider = previousByBaseUrl.get(meta.baseUrl) ?? null;
+    const prevProvider = findPrevious(meta);
     const prevEntries = prevProvider?.models ?? [];
 
     // 静态清单（deepseek/智谱）：无需目录审计，恒 ok。
@@ -737,19 +750,25 @@ async function main() {
 
     const apiKey = readEnvKey(meta.envKeys);
     if (metaNeedsKey(meta) && !apiKey) {
-      // 未配置密钥：跳过，沿用上一期清单。
-      results.push({
-        meta,
-        status: 'skipped',
-        error: null,
-        models: prevEntries
+      // 未配置密钥：跳过。模型清单 = staticFallback（若有，如 gemini 免费白名单）
+      // 否则沿用上一期清单。
+      const fallback = meta.staticFallback?.map((m) => ({
+        id: m.id,
+        displayName: m.id,
+        contextWindow: m.contextWindow ?? null,
+      })) ?? prevEntries
           .map((e) => {
             const id = typeof e === 'string' ? e : e?.name;
             if (typeof id !== 'string') return null;
             const cw = typeof e === 'object' ? e.context_window ?? null : null;
             return { id, displayName: id, contextWindow: cw };
           })
-          .filter(Boolean),
+          .filter(Boolean);
+      results.push({
+        meta,
+        status: 'skipped',
+        error: null,
+        models: fallback,
       });
       console.error(`[audit] skipped ${meta.key}: no ${meta.envKeys.join('|')}`);
       continue;
@@ -767,14 +786,19 @@ async function main() {
       });
       console.error(`[audit] ${meta.key}: ok, ${models.length} free models`);
     } catch (err) {
-      // 目录失败/空响应/零匹配：标记 error 并沿用上一期清单（防误报「全部下架」）。
+      // 目录失败/空响应/零匹配：标记 error 并沿用清单（防误报「全部下架」）：
+      // staticFallback 优先（如 gemini 免费白名单），否则沿用上一期。
       const msg = err instanceof Error ? err.message : String(err);
       console.error(`[audit] ${meta.key}: ERROR — ${msg}; preserving previous snapshot`);
       results.push({
         meta,
         status: 'error',
         error: msg,
-        models: prevEntries
+        models: meta.staticFallback?.map((m) => ({
+          id: m.id,
+          displayName: m.id,
+          contextWindow: m.contextWindow ?? null,
+        })) ?? prevEntries
           .map((e) => {
             const id = typeof e === 'string' ? e : e?.name;
             if (typeof id !== 'string') return null;
@@ -790,14 +814,15 @@ async function main() {
   const date = todayIsoInShanghai();
   const outProviders = [];
   for (const r of results) {
-    const prevProvider = previousByBaseUrl.get(r.meta.baseUrl) ?? null;
-    // 元数据：上一期已存在的沿用其 id/name/api_type/register_url；
-    // 新增供应商用 PROVIDER_META 的 display/registerUrl 首期元数据。
+    const prevProvider = findPrevious(r.meta);
+    // 元数据：base_url/api_type 以 PROVIDER_META 为权威（如 gemini 切换官方 OpenAI
+    // 兼容端点 + api_type gemini→openai）；id/name/register_url 沿用上一期，
+    // 新增供应商用 meta 的 display/registerUrl 首期元数据。
     const provider = {
       id: prevProvider?.id ?? '',
       name: prevProvider?.name ?? r.meta.display,
-      base_url: prevProvider?.base_url ?? r.meta.baseUrl,
-      api_type: prevProvider?.api_type ?? 'openai',
+      base_url: r.meta.baseUrl,
+      api_type: r.meta.apiType ?? prevProvider?.api_type ?? 'openai',
       register_url: prevProvider?.register_url ?? r.meta.registerUrl ?? '',
       status: r.status,
       models: r.models.map(toJsonModel),
