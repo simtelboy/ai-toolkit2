@@ -114,8 +114,62 @@ const VOLC_FREE_ALLOW_LIST = [
 
 // deepseek：官方无免费层，静态清单（上下文窗口 1M，对齐上一期手工清单）。
 const DEEPSEEK_STATIC_MODELS = [
-  { name: 'deepseek-v4-flash', context_window: 1048576, max_tokens: 1048576 },
-  { name: 'deepseek-v4-pro', context_window: 1048576, max_tokens: 1048576 },
+  { id: 'deepseek-v4-flash', contextWindow: 1048576, maxTokens: 1048576 },
+  { id: 'deepseek-v4-pro', contextWindow: 1048576, maxTokens: 1048576 },
+];
+
+// ---- 以下 6 个判据移植自 FreeModelFinder（github.com/orange90/FreeModelFinder）----
+
+// 智谱：官方免费 Flash 静态清单（移植 zhipu.ts ZHIPU_STATIC_MODELS）。
+const ZHIPU_STATIC_MODELS = [
+  { id: 'glm-4-flash', contextWindow: 128000 },
+  { id: 'glm-4.7-flash', contextWindow: 200000 },
+];
+
+// 魔搭：账号免费额度白名单（移植 modelscope.ts MS_FREE_ALLOW_LIST）× 实时目录交集。
+const MS_FREE_ALLOW_LIST = [
+  { id: 'Qwen/Qwen3-235B-A22B-Instruct-2507', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-235B-A22B-Thinking-2507', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-Next-80B-A3B-Instruct', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-Next-80B-A3B-Thinking', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-Coder-480B-A35B-Instruct', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-Coder-30B-A3B-Instruct', contextWindow: 262144 },
+  { id: 'Qwen/Qwen3-VL-235B-A22B-Instruct', contextWindow: 131072 },
+  { id: 'Qwen/Qwen3-32B', contextWindow: 131072 },
+  { id: 'deepseek-ai/DeepSeek-V3.1', contextWindow: 131072 },
+  { id: 'deepseek-ai/DeepSeek-V3', contextWindow: 65536 },
+  { id: 'deepseek-ai/DeepSeek-R1', contextWindow: 65536 },
+  { id: 'ZhipuAI/GLM-4.6', contextWindow: 204800 },
+  { id: 'ZhipuAI/GLM-4.5', contextWindow: 131072 },
+  { id: 'moonshotai/Kimi-K2-Instruct', contextWindow: 131072 },
+  { id: 'MiniMax/MiniMax-M2', contextWindow: 204800 },
+  { id: 'stepfun-ai/step3', contextWindow: 65536 },
+];
+const MS_FREE_ALLOW_MAP = new Map(MS_FREE_ALLOW_LIST.map((m) => [m.id.toLowerCase(), m]));
+
+// Cohere：Trial 与 Production Key 都明确免费的 north-mini-code-1-0（移植 cohere.ts）。
+const COHERE_FREE_ALLOW_LIST = ['north-mini-code-1-0'];
+
+// Hugging Face Router：canonical 大小写映射（移植 huggingface.ts HF_RECOMMENDED）。
+const HF_RECOMMENDED_MAP = new Map(
+  [
+    'deepseek-ai/DeepSeek-V3-0324',
+    'deepseek-ai/DeepSeek-R1-0528',
+    'meta-llama/Llama-3.3-70B-Instruct',
+    'Qwen/Qwen2.5-72B-Instruct',
+    'Qwen/Qwen2.5-Coder-32B-Instruct',
+    'zai-org/GLM-4.5',
+    'moonshotai/Kimi-K2-Instruct',
+    'google/gemma-3-27b-it',
+    'MiniMaxAI/MiniMax-M1-80k',
+  ].map((id) => [id.toLowerCase(), id]),
+);
+
+// 商汤 SenseNova：目录零价过滤，接口不可用时回退审核过的免费静态清单（移植 sensenova.ts）。
+const SENSENOVA_STATIC_MODELS = [
+  { id: 'sensenova-6.7-flash-lite', contextWindow: 262144 },
+  { id: 'deepseek-v4-flash', contextWindow: 1048576 },
+  { id: 'glm-5.2', contextWindow: 1048576 },
 ];
 
 // OpenRouter：排除内容安全/嵌入/重排等非对话工具模型（移植 openrouter.ts）。
@@ -284,51 +338,279 @@ async function fetchVolcengine(apiKey) {
   return [...matched.values()];
 }
 
+// 智谱：官方免费 Flash 静态清单（无目录审计；与 deepseek 同款静态口径）。
+async function fetchZhipu() {
+  return ZHIPU_STATIC_MODELS.map((m) => ({
+    id: m.id,
+    displayName: m.id,
+    contextWindow: m.contextWindow,
+  }));
+}
+
+// 魔搭：白名单 × 实时目录交集（移植 modelscope.ts；零匹配抛错防误报）。
+async function fetchModelscope(apiKey) {
+  const res = await fetch('https://api-inference.modelscope.cn/v1/models', {
+    headers: { authorization: `Bearer ${apiKey}` },
+  });
+  if (!res.ok) throw new Error(`modelscope list models failed: ${res.status}`);
+  const data = await res.json();
+  const raw = Array.isArray(data?.data) ? data.data : [];
+  if (raw.length === 0) throw new Error('modelscope list models returned empty data');
+  const matched = new Map();
+  for (const m of raw) {
+    if (typeof m?.id !== 'string') continue;
+    const canonical = MS_FREE_ALLOW_MAP.get(m.id.toLowerCase());
+    if (!canonical) continue;
+    matched.set(canonical.id, {
+      id: canonical.id,
+      displayName: canonical.id,
+      contextWindow: canonical.contextWindow,
+    });
+  }
+  if (matched.size === 0) {
+    throw new Error(
+      `modelscope list models returned ${raw.length} entries but none matched the free whitelist`,
+    );
+  }
+  return [...matched.values()];
+}
+
+// GitHub Models：公开目录全收录（文本输出，免费 tier 原型开发额度）。
+// catalog 端点无需认证即可访问；配了 token 则带上。
+async function fetchGithubModels(apiKey) {
+  const headers = { accept: 'application/vnd.github+json' };
+  if (apiKey) headers.authorization = `Bearer ${apiKey}`;
+  const res = await fetch('https://models.github.ai/catalog/models', { headers });
+  if (!res.ok) throw new Error(`github models list failed: ${res.status}`);
+  const data = await res.json();
+  const raw = Array.isArray(data) ? data : [];
+  if (raw.length === 0) throw new Error('github models list returned empty data');
+  return raw
+    .filter((m) => {
+      const outputs = m?.supported_output_modalities ?? [];
+      return typeof m?.id === 'string' && (outputs.length === 0 || outputs.includes('text'));
+    })
+    .map((m) => ({ id: m.id, displayName: m.name ?? m.id, contextWindow: null }));
+}
+
+// Cohere：north-mini-code-1-0 白名单 × 目录交集（chat 端点；移植 cohere.ts）。
+async function fetchCohere(apiKey) {
+  const res = await fetch('https://api.cohere.com/v1/models?page_size=1000', {
+    headers: { authorization: `Bearer ${apiKey}` },
+  });
+  if (!res.ok) throw new Error(`cohere list models failed: ${res.status}`);
+  const data = await res.json();
+  const raw = Array.isArray(data?.models) ? data.models : [];
+  if (raw.length === 0) throw new Error('cohere list models returned empty data');
+  const picked = [];
+  for (const m of raw) {
+    const rawId = m?.id ?? m?.name;
+    if (typeof rawId !== 'string') continue;
+    const endpoints = m?.endpoints ?? [];
+    if (endpoints.length > 0 && !endpoints.includes('chat')) continue;
+    if (!COHERE_FREE_ALLOW_LIST.includes(rawId.toLowerCase())) continue;
+    picked.push({
+      id: rawId.toLowerCase(),
+      displayName: rawId,
+      contextWindow: m.context_length ?? null,
+    });
+  }
+  if (picked.length === 0) {
+    throw new Error(`cohere list models returned ${raw.length} entries but none matched the free whitelist`);
+  }
+  return picked;
+}
+
+// Hugging Face Router：模型 providers[] 中存在免费后端（is_free 或价 0）才收录。
+function hfIsFreeProvider(p) {
+  if (p?.status && p.status !== 'live') return false;
+  if (p?.is_free === true) return true;
+  const inPrice = p?.pricing?.input;
+  const outPrice = p?.pricing?.output;
+  return typeof inPrice === 'number' && typeof outPrice === 'number' && inPrice === 0 && outPrice === 0;
+}
+
+async function fetchHuggingface(apiKey) {
+  const res = await fetch('https://router.huggingface.co/v1/models', {
+    headers: { authorization: `Bearer ${apiKey}` },
+  });
+  if (!res.ok) throw new Error(`huggingface list models failed: ${res.status}`);
+  const data = await res.json();
+  const raw = Array.isArray(data?.data) ? data.data : [];
+  if (raw.length === 0) throw new Error('huggingface list models returned empty data');
+  const seen = new Set();
+  const models = [];
+  for (const m of raw) {
+    if (typeof m?.id !== 'string') continue;
+    const providers = Array.isArray(m.providers) ? m.providers : [];
+    const freeProviders = providers.filter(hfIsFreeProvider);
+    if (freeProviders.length === 0) continue;
+    const canonical = HF_RECOMMENDED_MAP.get(m.id.toLowerCase()) ?? m.id;
+    if (seen.has(canonical)) continue;
+    seen.add(canonical);
+    const ctx =
+      m.context_length ??
+      freeProviders.map((p) => p.context_length).find((v) => typeof v === 'number');
+    models.push({ id: canonical, displayName: canonical, contextWindow: ctx ?? null });
+  }
+  if (models.length === 0) {
+    throw new Error(
+      `huggingface list models returned ${raw.length} entries but none had a free backend`,
+    );
+  }
+  return models;
+}
+
+// 商汤 SenseNova：目录零价过滤；接口不可用时回退审核过的免费静态清单（与上游同款，
+// 静态清单是官方免费 tier，回退视作成功而非 error）。
+async function fetchSensenova(apiKey) {
+  try {
+    const res = await fetch('https://token.sensenova.cn/v1/models', {
+      headers: { authorization: `Bearer ${apiKey}` },
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const raw = Array.isArray(data?.data) ? data.data : [];
+      const dynamic = raw
+        .filter((m) => typeof m?.id === 'string' && m.id.length > 0)
+        .filter((m) => {
+          const outs = m.output_modalities;
+          if (Array.isArray(outs) && !outs.includes('text')) return false;
+          const prompt = Number(m.pricing?.prompt ?? Number.NaN);
+          const completion = Number(m.pricing?.completion ?? Number.NaN);
+          return prompt === 0 && completion === 0;
+        })
+        .map((m) => ({ id: m.id, displayName: m.id, contextWindow: null }));
+      if (dynamic.length > 0) return dynamic;
+    }
+  } catch {
+    // 回退静态清单
+  }
+  return SENSENOVA_STATIC_MODELS.map((m) => ({
+    id: m.id,
+    displayName: m.id,
+    contextWindow: m.contextWindow,
+  }));
+}
+
 // 审计键 → 抓取器（按 base_url 与上一期 providers.json 对齐，不依赖数组下标）。
+// display/registerUrl 是新增供应商的首期元数据（中文名、注册链接），
+// 上一期已存在时沿用上一期的 id/name/api_type/register_url。
 const PROVIDER_META = [
   {
     key: 'nvidia',
     envKeys: ['NVIDIA_API_KEY'],
     baseUrl: 'https://integrate.api.nvidia.com/v1',
+    display: '英伟达',
+    registerUrl: 'https://build.nvidia.com/explore/discover?modal=signin',
     fetch: fetchNvidia,
   },
   {
     key: 'groq',
     envKeys: ['GROQ_API_KEY'],
     baseUrl: 'https://api.groq.com/openai/v1',
+    display: 'Groq',
+    registerUrl: 'https://console.groq.com/',
     fetch: fetchGroq,
   },
   {
     key: 'gemini',
     envKeys: ['GEMINI_API_KEY', 'GOOGLE_API_KEY'],
     baseUrl: 'https://generativelanguage.googleapis.com/v1',
+    display: '谷歌',
+    registerUrl: 'https://aistudio.google.com/prompts/new_chat',
     fetch: fetchGemini,
   },
   {
     key: 'openrouter',
     envKeys: ['OPENROUTER_API_KEY'],
     baseUrl: 'https://openrouter.ai/api/v1',
+    display: 'openrouter',
+    registerUrl: 'https://openrouter.ai/',
     fetch: fetchOpenrouter,
   },
   {
     key: 'siliconflow',
     envKeys: ['SILICONFLOW_API_KEY'],
     baseUrl: 'https://api.siliconflow.cn/v1',
+    display: '硅基流动',
+    registerUrl: 'https://cloud.siliconflow.cn/',
     fetch: fetchSiliconflow,
   },
   {
     key: 'volcengine',
     envKeys: ['VOLCENGINE_API_KEY'],
     baseUrl: 'https://ark.cn-beijing.volcengine.com/api/v3',
+    display: '火山引擎',
+    registerUrl: 'https://console.volcengine.com/ark',
     fetch: fetchVolcengine,
   },
   {
     key: 'deepseek',
-    envKeys: [], // 静态清单，无需密钥
+    envKeys: [],
     baseUrl: 'https://api.deepseek.com/anthropic',
-    fetch: null,
+    display: 'deepseek',
+    registerUrl: 'https://chat.deepseek.com/sign_up',
+    staticModels: DEEPSEEK_STATIC_MODELS,
+  },
+  // ---- 以下移植自 FreeModelFinder ----
+  {
+    key: 'zhipu',
+    envKeys: [],
+    baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
+    display: '智谱 AI',
+    registerUrl: 'https://open.bigmodel.cn/',
+    staticModels: ZHIPU_STATIC_MODELS,
+  },
+  {
+    key: 'modelscope',
+    envKeys: ['MODELSCOPE_API_KEY'],
+    baseUrl: 'https://api-inference.modelscope.cn/v1',
+    display: '魔搭',
+    registerUrl: 'https://modelscope.cn/',
+    fetch: fetchModelscope,
+  },
+  {
+    key: 'github',
+    envKeys: ['GITHUB_MODELS_TOKEN'],
+    baseUrl: 'https://models.github.ai/inference',
+    display: 'GitHub Models',
+    registerUrl: 'https://github.com/marketplace/models',
+    // 目录公开可拉：无 token 也尝试审计（配了 token 则带上）。
+    fetch: fetchGithubModels,
+  },
+  {
+    key: 'cohere',
+    envKeys: ['COHERE_API_KEY'],
+    baseUrl: 'https://api.cohere.ai/compatibility/v1',
+    display: 'Cohere',
+    registerUrl: 'https://dashboard.cohere.com/welcome/register',
+    fetch: fetchCohere,
+  },
+  {
+    key: 'huggingface',
+    envKeys: ['HUGGINGFACE_API_KEY'],
+    baseUrl: 'https://router.huggingface.co/v1',
+    display: 'Hugging Face',
+    registerUrl: 'https://huggingface.co/join',
+    fetch: fetchHuggingface,
+  },
+  {
+    key: 'sensenova',
+    envKeys: ['SENSENOVA_API_KEY'],
+    baseUrl: 'https://token.sensenova.cn/v1',
+    display: '商汤 SenseNova',
+    registerUrl: 'https://platform.sensenova.cn/',
+    fetch: fetchSensenova,
   },
 ];
+
+/// 是否需要密钥：静态清单（deepseek/智谱）不需要；GitHub Models 目录公开（token 可选）。
+function metaNeedsKey(meta) {
+  if (meta.staticModels) return false;
+  if (meta.key === 'github') return false;
+  return true;
+}
 
 // ---------------------------------------------------------------------------
 // 工具函数
@@ -408,24 +690,27 @@ async function main() {
     const prevProvider = previousByBaseUrl.get(meta.baseUrl) ?? null;
     const prevEntries = prevProvider?.models ?? [];
 
-    // 静态清单（deepseek）：无需目录，恒 ok。
-    if (!meta.fetch) {
+    // 静态清单（deepseek/智谱）：无需目录审计，恒 ok。
+    if (meta.staticModels) {
       results.push({
         meta,
         status: 'ok',
         error: null,
-        models: DEEPSEEK_STATIC_MODELS.map((m) => ({
-          id: m.name,
-          displayName: m.name,
-          contextWindow: m.context_window,
-          maxTokens: m.max_tokens,
+        models: meta.staticModels.map((m) => ({
+          id: m.id,
+          displayName: m.id,
+          contextWindow: m.contextWindow ?? null,
+          maxTokens: m.maxTokens ?? null,
         })),
       });
       continue;
     }
 
-    const apiKey = readEnvKey(meta.envKeys);
-    if (!apiKey) {
+    // GitHub Models 目录公开：无 token 也审计（fetch 内按需带认证头）。
+    const apiKey = meta.key === 'github'
+      ? (readEnvKey(meta.envKeys) ?? null)
+      : readEnvKey(meta.envKeys);
+    if (metaNeedsKey(meta) && !apiKey) {
       // 未配置密钥：跳过，沿用上一期清单。
       results.push({
         meta,
@@ -480,13 +765,14 @@ async function main() {
   const outProviders = [];
   for (const r of results) {
     const prevProvider = previousByBaseUrl.get(r.meta.baseUrl) ?? null;
-    // 元数据以审计结果为准，但保留上一期的 id/name/api_type/register_url。
+    // 元数据：上一期已存在的沿用其 id/name/api_type/register_url；
+    // 新增供应商用 PROVIDER_META 的 display/registerUrl 首期元数据。
     const provider = {
       id: prevProvider?.id ?? '',
-      name: prevProvider?.name ?? r.meta.key,
+      name: prevProvider?.name ?? r.meta.display,
       base_url: prevProvider?.base_url ?? r.meta.baseUrl,
       api_type: prevProvider?.api_type ?? 'openai',
-      register_url: prevProvider?.register_url ?? '',
+      register_url: prevProvider?.register_url ?? r.meta.registerUrl ?? '',
       status: r.status,
       models: r.models.map(toJsonModel),
     };

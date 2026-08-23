@@ -25,12 +25,18 @@ jobs:
     env:
       # 供应商 API 密钥。未在仓库 Secrets 中配置的供应商会被脚本标记为
       # status=skipped 并沿用上一期清单，不影响其它供应商审计。
+      # （GitHub Models 目录公开可拉，token 可选；deepseek/智谱为静态清单无需密钥。）
       NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
       VOLCENGINE_API_KEY: ${{ secrets.VOLCENGINE_API_KEY }}
+      MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+      GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+      COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+      HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
+      SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
     steps:
       - uses: actions/checkout@v6
         with:
