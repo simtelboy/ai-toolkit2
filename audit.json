@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-08-24",
-  "generatedAt": "2026-08-23T22:54:10.097Z",
+  "generatedAt": "2026-08-23T22:55:19.826Z",
   "totalModels": 142,
   "providers": [
     {
@@ -368,7 +368,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "fetch failed",
+      "error": "volcengine list models returned 130 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",

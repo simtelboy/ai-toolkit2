@@ -188,7 +188,7 @@
     {
       "id": "jde5o",
       "name": "火山引擎",
-      "base_url": "https://ark.cn-beijing.volcengine.com/api/v3",
+      "base_url": "https://ark.cn-beijing.volces.com/api/v3",
       "api_type": "openai",
       "register_url": "https://console.volcengine.com/ark",
       "status": "error",
