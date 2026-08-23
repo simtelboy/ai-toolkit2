@@ -163,26 +163,6 @@
       ]
     },
     {
-      "id": "7hqdk",
-      "name": "deepseek",
-      "base_url": "https://api.deepseek.com/anthropic",
-      "api_type": "anthropic",
-      "register_url": "https://chat.deepseek.com/sign_up",
-      "status": "ok",
-      "models": [
-        {
-          "name": "deepseek-v4-flash",
-          "context_window": 1048576,
-          "max_tokens": 1048576
-        },
-        {
-          "name": "deepseek-v4-pro",
-          "context_window": 1048576,
-          "max_tokens": 1048576
-        }
-      ]
-    },
-    {
       "id": "",
       "name": "智谱 AI",
       "base_url": "https://open.bigmodel.cn/api/paas/v4",

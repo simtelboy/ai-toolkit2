@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "date": "2026-08-23",
-  "generatedAt": "2026-08-23T10:44:13.131Z",
-  "totalModels": 104,
+  "generatedAt": "2026-08-23T11:05:18.261Z",
+  "totalModels": 102,
   "providers": [
     {
       "id": "nvidia",
@@ -553,24 +553,6 @@
       ]
     },
     {
-      "id": "deepseek",
-      "status": "ok",
-      "count": 2,
-      "error": null,
-      "models": [
-        {
-          "id": "deepseek-v4-flash",
-          "displayName": "deepseek-v4-flash",
-          "contextWindow": 1048576
-        },
-        {
-          "id": "deepseek-v4-pro",
-          "displayName": "deepseek-v4-pro",
-          "contextWindow": 1048576
-        }
-      ]
-    },
-    {
       "id": "zhipu",
       "status": "ok",
       "count": 2,
@@ -621,12 +603,12 @@
     "comparedWith": "2026-08-23",
     "added": [
       {
-        "provider": "deepseek",
-        "id": "deepseek-v4-flash"
+        "provider": "zhipu",
+        "id": "glm-4-flash"
       },
       {
-        "provider": "deepseek",
-        "id": "deepseek-v4-pro"
+        "provider": "zhipu",
+        "id": "glm-4.7-flash"
       }
     ],
     "removed": []

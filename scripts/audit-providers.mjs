@@ -112,11 +112,8 @@ const VOLC_FREE_ALLOW_LIST = [
   'doubao-seed-character',
 ];
 
-// deepseek：官方无免费层，静态清单（上下文窗口 1M，对齐上一期手工清单）。
-const DEEPSEEK_STATIC_MODELS = [
-  { id: 'deepseek-v4-flash', contextWindow: 1048576, maxTokens: 1048576 },
-  { id: 'deepseek-v4-pro', contextWindow: 1048576, maxTokens: 1048576 },
-];
+// deepseek：官方无免费层（纯付费），用户拍板从免费模型清单中移除（2026-08-23）。
+// 本清单定位「免费模型目录」，不混收费供应商。
 
 // ---- 以下 6 个判据移植自 FreeModelFinder（github.com/orange90/FreeModelFinder）----
 
@@ -530,14 +527,6 @@ const PROVIDER_META = [
     registerUrl: 'https://console.volcengine.com/ark',
     fetch: fetchVolcengine,
   },
-  {
-    key: 'deepseek',
-    envKeys: [],
-    baseUrl: 'https://api.deepseek.com/anthropic',
-    display: 'deepseek',
-    registerUrl: 'https://chat.deepseek.com/sign_up',
-    staticModels: DEEPSEEK_STATIC_MODELS,
-  },
   // ---- 以下移植自 FreeModelFinder ----
   {
     key: 'zhipu',
@@ -581,7 +570,7 @@ const PROVIDER_META = [
   },
 ];
 
-/// 是否需要密钥：静态清单（deepseek/智谱）不需要。
+/// 是否需要密钥：静态清单（智谱）不需要。
 function metaNeedsKey(meta) {
   if (meta.staticModels) return false;
   return true;

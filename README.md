@@ -15,9 +15,9 @@ ToadPack（aiclient-guardian-rust）的在线模型目录仓库：`providers.jso
 - 智谱：官方免费 Flash 静态清单（GLM-4-Flash / GLM-4.7-Flash）
 - Groq：平台不按模型计费（免费 tier 限速），目录全收录（排除音频/嵌入类）
 - 火山引擎：免费/试用 doubao 型号白名单 × 实时目录交集
-- deepseek：静态清单（官方无免费层）
 
 > GitHub Models 已于 2026-08 官方退休（目录端点 410 retirement brownout），不再收录。
+> deepseek 官方无免费层（纯付费），已从免费模型清单移除（2026-08-23，用户拍板）。
 
 **防误报**：目录接口失败/空响应/零匹配时，该供应商标记 `status=error` 并沿用上一期清单；
 未配置密钥的供应商标记 `status=skipped` 同样沿用。
