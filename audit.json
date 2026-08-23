@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "date": "2026-08-23",
-  "generatedAt": "2026-08-23T09:31:04.796Z",
-  "totalModels": 102,
+  "generatedAt": "2026-08-23T10:44:13.131Z",
+  "totalModels": 104,
   "providers": [
     {
       "id": "nvidia",
@@ -569,11 +569,66 @@
           "contextWindow": 1048576
         }
       ]
+    },
+    {
+      "id": "zhipu",
+      "status": "ok",
+      "count": 2,
+      "error": null,
+      "models": [
+        {
+          "id": "glm-4-flash",
+          "displayName": "glm-4-flash",
+          "contextWindow": 128000
+        },
+        {
+          "id": "glm-4.7-flash",
+          "displayName": "glm-4.7-flash",
+          "contextWindow": 200000
+        }
+      ]
+    },
+    {
+      "id": "modelscope",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "cohere",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "huggingface",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
+    },
+    {
+      "id": "sensenova",
+      "status": "skipped",
+      "count": 0,
+      "error": null,
+      "models": []
     }
   ],
   "changes": {
-    "comparedWith": null,
-    "added": [],
+    "comparedWith": "2026-08-23",
+    "added": [
+      {
+        "provider": "deepseek",
+        "id": "deepseek-v4-flash"
+      },
+      {
+        "provider": "deepseek",
+        "id": "deepseek-v4-pro"
+      }
+    ],
     "removed": []
   }
 }

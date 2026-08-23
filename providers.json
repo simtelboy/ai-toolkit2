@@ -181,6 +181,60 @@
           "max_tokens": 1048576
         }
       ]
+    },
+    {
+      "id": "",
+      "name": "智谱 AI",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "api_type": "openai",
+      "register_url": "https://open.bigmodel.cn/",
+      "status": "ok",
+      "models": [
+        {
+          "name": "glm-4-flash",
+          "context_window": 128000
+        },
+        {
+          "name": "glm-4.7-flash",
+          "context_window": 200000
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "魔搭",
+      "base_url": "https://api-inference.modelscope.cn/v1",
+      "api_type": "openai",
+      "register_url": "https://modelscope.cn/",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "Cohere",
+      "base_url": "https://api.cohere.ai/compatibility/v1",
+      "api_type": "openai",
+      "register_url": "https://dashboard.cohere.com/welcome/register",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "Hugging Face",
+      "base_url": "https://router.huggingface.co/v1",
+      "api_type": "openai",
+      "register_url": "https://huggingface.co/join",
+      "status": "skipped",
+      "models": []
+    },
+    {
+      "id": "",
+      "name": "商汤 SenseNova",
+      "base_url": "https://token.sensenova.cn/v1",
+      "api_type": "openai",
+      "register_url": "https://platform.sensenova.cn/",
+      "status": "skipped",
+      "models": []
     }
   ]
 }

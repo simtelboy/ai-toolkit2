@@ -375,23 +375,8 @@ async function fetchModelscope(apiKey) {
   return [...matched.values()];
 }
 
-// GitHub Models：公开目录全收录（文本输出，免费 tier 原型开发额度）。
-// catalog 端点无需认证即可访问；配了 token 则带上。
-async function fetchGithubModels(apiKey) {
-  const headers = { accept: 'application/vnd.github+json' };
-  if (apiKey) headers.authorization = `Bearer ${apiKey}`;
-  const res = await fetch('https://models.github.ai/catalog/models', { headers });
-  if (!res.ok) throw new Error(`github models list failed: ${res.status}`);
-  const data = await res.json();
-  const raw = Array.isArray(data) ? data : [];
-  if (raw.length === 0) throw new Error('github models list returned empty data');
-  return raw
-    .filter((m) => {
-      const outputs = m?.supported_output_modalities ?? [];
-      return typeof m?.id === 'string' && (outputs.length === 0 || outputs.includes('text'));
-    })
-    .map((m) => ({ id: m.id, displayName: m.name ?? m.id, contextWindow: null }));
-}
+// GitHub Models：已于 2026-08 官方退休（catalog 端点 410 retirement brownout），
+// 用户拍板从审计中移除——不再收录，本地已导入的模型由客户端按「供应商整体下线」标注。
 
 // Cohere：north-mini-code-1-0 白名单 × 目录交集（chat 端点；移植 cohere.ts）。
 async function fetchCohere(apiKey) {
@@ -571,15 +556,6 @@ const PROVIDER_META = [
     fetch: fetchModelscope,
   },
   {
-    key: 'github',
-    envKeys: ['GITHUB_MODELS_TOKEN'],
-    baseUrl: 'https://models.github.ai/inference',
-    display: 'GitHub Models',
-    registerUrl: 'https://github.com/marketplace/models',
-    // 目录公开可拉：无 token 也尝试审计（配了 token 则带上）。
-    fetch: fetchGithubModels,
-  },
-  {
     key: 'cohere',
     envKeys: ['COHERE_API_KEY'],
     baseUrl: 'https://api.cohere.ai/compatibility/v1',
@@ -605,10 +581,9 @@ const PROVIDER_META = [
   },
 ];
 
-/// 是否需要密钥：静态清单（deepseek/智谱）不需要；GitHub Models 目录公开（token 可选）。
+/// 是否需要密钥：静态清单（deepseek/智谱）不需要。
 function metaNeedsKey(meta) {
   if (meta.staticModels) return false;
-  if (meta.key === 'github') return false;
   return true;
 }
 
@@ -706,10 +681,7 @@ async function main() {
       continue;
     }
 
-    // GitHub Models 目录公开：无 token 也审计（fetch 内按需带认证头）。
-    const apiKey = meta.key === 'github'
-      ? (readEnvKey(meta.envKeys) ?? null)
-      : readEnvKey(meta.envKeys);
+    const apiKey = readEnvKey(meta.envKeys);
     if (metaNeedsKey(meta) && !apiKey) {
       // 未配置密钥：跳过，沿用上一期清单。
       results.push({
