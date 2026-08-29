@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-08-24",
+  "audited_at": "2026-08-29",
   "providers": [
     {
       "id": "2d06tu",
@@ -12,29 +12,18 @@
       "models": [
         "google/diffusiongemma-26b-a4b-it",
         "google/gemma-4-31b-it",
-        "meta/llama-3.1-70b-instruct",
-        "meta/llama-3.1-8b-instruct",
         "meta/llama-3.2-11b-vision-instruct",
-        "meta/llama-3.2-1b-instruct",
-        "meta/llama-3.2-3b-instruct",
         "meta/llama-3.2-90b-vision-instruct",
         "minimaxai/minimax-m3",
         "mistralai/mistral-nemotron",
         "nvidia/ising-calibration-1.5-31b",
-        "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-        "nvidia/llama-3.3-nemotron-super-49b-v1",
-        "nvidia/llama-3.3-nemotron-super-49b-v1.5",
         "nvidia/nemotron-3-nano-30b-a3b",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
         "nvidia/nemotron-3-super-120b-a12b",
         "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/nemotron-mini-4b-instruct",
-        "nvidia/nemotron-nano-12b-v2-vl",
-        "nvidia/nvidia-nemotron-nano-9b-v2",
         "nvidia/riva-translate-4b-instruct-v1.1",
         "openai/gpt-oss-120b",
-        "openai/gpt-oss-20b",
-        "stepfun-ai/step-3.7-flash"
+        "openai/gpt-oss-20b"
       ]
     },
     {
@@ -55,7 +44,8 @@
         "openai/gpt-oss-120b",
         "openai/gpt-oss-20b",
         "openai/gpt-oss-safeguard-20b",
-        "qwen/qwen3.6-27b"
+        "qwen/qwen3.6-27b",
+        "qwen/qwen3.8-27b"
       ]
     },
     {
@@ -113,12 +103,20 @@
           "context_window": 262144
         },
         {
+          "name": "inclusionai/ling-3.0-flash-fin:free",
+          "context_window": 262144
+        },
+        {
           "name": "liquid/lfm-2.5-2.6b:free",
           "context_window": 65536
         },
         {
-          "name": "nvidia/nemotron-3-nano-30b-a3b:free",
-          "context_window": 256000
+          "name": "minimax/minimax-m2.7:free",
+          "context_window": 196608
+        },
+        {
+          "name": "minimax/minimax-m3:free",
+          "context_window": 1048576
         },
         {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -137,14 +135,6 @@
           "context_window": 1000000
         },
         {
-          "name": "nvidia/nemotron-nano-12b-v2-vl:free",
-          "context_window": 128000
-        },
-        {
-          "name": "nvidia/nemotron-nano-9b-v2:free",
-          "context_window": 128000
-        },
-        {
           "name": "openrouter/free",
           "context_window": 200000
         },
@@ -158,11 +148,11 @@
         },
         {
           "name": "thinkingmachines/inkling-small:free",
-          "context_window": 262144
+          "context_window": 1048576
         },
         {
           "name": "thinkingmachines/inkling:free",
-          "context_window": 262144
+          "context_window": 1048576
         },
         {
           "name": "z-ai/glm-5.2:free",
@@ -318,7 +308,6 @@
         "devstral-2512",
         "devstral-latest",
         "devstral-medium-latest",
-        "glm-5-2",
         "labs-leanstral-1-5",
         "labs-leanstral-1-5-1",
         "magistral-medium-latest",
@@ -363,8 +352,7 @@
         "voxtral-mini-tts-2603",
         "voxtral-mini-tts-latest",
         "voxtral-small-2507",
-        "voxtral-small-latest",
-        "zai-glm-5-2"
+        "voxtral-small-latest"
       ]
     },
     {

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-08-24",
-  "generatedAt": "2026-08-23T22:55:19.826Z",
-  "totalModels": 142,
+  "date": "2026-08-29",
+  "generatedAt": "2026-08-29T03:50:12.348Z",
+  "totalModels": 130,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 25,
+      "count": 14,
       "error": null,
       "models": [
         {
@@ -21,28 +21,8 @@
           "contextWindow": null
         },
         {
-          "id": "meta/llama-3.1-70b-instruct",
-          "displayName": "meta/llama-3.1-70b-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "meta/llama-3.1-8b-instruct",
-          "displayName": "meta/llama-3.1-8b-instruct",
-          "contextWindow": null
-        },
-        {
           "id": "meta/llama-3.2-11b-vision-instruct",
           "displayName": "meta/llama-3.2-11b-vision-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "meta/llama-3.2-1b-instruct",
-          "displayName": "meta/llama-3.2-1b-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "meta/llama-3.2-3b-instruct",
-          "displayName": "meta/llama-3.2-3b-instruct",
           "contextWindow": null
         },
         {
@@ -66,21 +46,6 @@
           "contextWindow": null
         },
         {
-          "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-          "displayName": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
-          "displayName": "nvidia/llama-3.3-nemotron-super-49b-v1",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-          "displayName": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
-          "contextWindow": null
-        },
-        {
           "id": "nvidia/nemotron-3-nano-30b-a3b",
           "displayName": "nvidia/nemotron-3-nano-30b-a3b",
           "contextWindow": null
@@ -101,21 +66,6 @@
           "contextWindow": null
         },
         {
-          "id": "nvidia/nemotron-mini-4b-instruct",
-          "displayName": "nvidia/nemotron-mini-4b-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/nemotron-nano-12b-v2-vl",
-          "displayName": "nvidia/nemotron-nano-12b-v2-vl",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/nvidia-nemotron-nano-9b-v2",
-          "displayName": "nvidia/nvidia-nemotron-nano-9b-v2",
-          "contextWindow": null
-        },
-        {
           "id": "nvidia/riva-translate-4b-instruct-v1.1",
           "displayName": "nvidia/riva-translate-4b-instruct-v1.1",
           "contextWindow": null
@@ -129,18 +79,13 @@
           "id": "openai/gpt-oss-20b",
           "displayName": "openai/gpt-oss-20b",
           "contextWindow": null
-        },
-        {
-          "id": "stepfun-ai/step-3.7-flash",
-          "displayName": "stepfun-ai/step-3.7-flash",
-          "contextWindow": null
         }
       ]
     },
     {
       "id": "groq",
       "status": "ok",
-      "count": 11,
+      "count": 12,
       "error": null,
       "models": [
         {
@@ -196,6 +141,11 @@
         {
           "id": "qwen/qwen3.6-27b",
           "displayName": "qwen/qwen3.6-27b",
+          "contextWindow": null
+        },
+        {
+          "id": "qwen/qwen3.8-27b",
+          "displayName": "qwen/qwen3.8-27b",
           "contextWindow": null
         }
       ]
@@ -260,14 +210,24 @@
           "contextWindow": 262144
         },
         {
+          "id": "inclusionai/ling-3.0-flash-fin:free",
+          "displayName": "Ling 3.0 Flash Fin (free)",
+          "contextWindow": 262144
+        },
+        {
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
         },
         {
-          "id": "nvidia/nemotron-3-nano-30b-a3b:free",
-          "displayName": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
-          "contextWindow": 256000
+          "id": "minimax/minimax-m2.7:free",
+          "displayName": "MiniMax: MiniMax M2.7 (free)",
+          "contextWindow": 196608
+        },
+        {
+          "id": "minimax/minimax-m3:free",
+          "displayName": "MiniMax: MiniMax M3 (free)",
+          "contextWindow": 1048576
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -290,16 +250,6 @@
           "contextWindow": 1000000
         },
         {
-          "id": "nvidia/nemotron-nano-12b-v2-vl:free",
-          "displayName": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
-          "contextWindow": 128000
-        },
-        {
-          "id": "nvidia/nemotron-nano-9b-v2:free",
-          "displayName": "NVIDIA: Nemotron Nano 9B V2 (free)",
-          "contextWindow": 128000
-        },
-        {
           "id": "openrouter/free",
           "displayName": "Free Models Router",
           "contextWindow": 200000
@@ -317,12 +267,12 @@
         {
           "id": "thinkingmachines/inkling-small:free",
           "displayName": "Thinking Machines: Inkling Small (free)",
-          "contextWindow": 262144
+          "contextWindow": 1048576
         },
         {
           "id": "thinkingmachines/inkling:free",
           "displayName": "Thinking Machines: Inkling (free)",
-          "contextWindow": 262144
+          "contextWindow": 1048576
         },
         {
           "id": "z-ai/glm-5.2:free",
@@ -555,7 +505,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 53,
+      "count": 51,
       "error": null,
       "models": [
         {
@@ -586,11 +536,6 @@
         {
           "id": "devstral-medium-latest",
           "displayName": "devstral-medium-latest",
-          "contextWindow": null
-        },
-        {
-          "id": "glm-5-2",
-          "displayName": "glm-5-2",
           "contextWindow": null
         },
         {
@@ -817,11 +762,6 @@
           "id": "voxtral-small-latest",
           "displayName": "voxtral-small-latest",
           "contextWindow": null
-        },
-        {
-          "id": "zai-glm-5-2",
-          "displayName": "zai-glm-5-2",
-          "contextWindow": null
         }
       ]
     },
@@ -846,23 +786,7 @@
       },
       {
         "provider": "nvidia",
-        "id": "meta/llama-3.1-70b-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "meta/llama-3.1-8b-instruct"
-      },
-      {
-        "provider": "nvidia",
         "id": "meta/llama-3.2-11b-vision-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "meta/llama-3.2-1b-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "meta/llama-3.2-3b-instruct"
       },
       {
         "provider": "nvidia",
@@ -882,18 +806,6 @@
       },
       {
         "provider": "nvidia",
-        "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/llama-3.3-nemotron-super-49b-v1"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/llama-3.3-nemotron-super-49b-v1.5"
-      },
-      {
-        "provider": "nvidia",
         "id": "nvidia/nemotron-3-nano-30b-a3b"
       },
       {
@@ -910,18 +822,6 @@
       },
       {
         "provider": "nvidia",
-        "id": "nvidia/nemotron-mini-4b-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/nemotron-nano-12b-v2-vl"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/nvidia-nemotron-nano-9b-v2"
-      },
-      {
-        "provider": "nvidia",
         "id": "nvidia/riva-translate-4b-instruct-v1.1"
       },
       {
@@ -931,10 +831,6 @@
       {
         "provider": "nvidia",
         "id": "openai/gpt-oss-20b"
-      },
-      {
-        "provider": "nvidia",
-        "id": "stepfun-ai/step-3.7-flash"
       },
       {
         "provider": "groq",
@@ -981,6 +877,10 @@
         "id": "qwen/qwen3.6-27b"
       },
       {
+        "provider": "groq",
+        "id": "qwen/qwen3.8-27b"
+      },
+      {
         "provider": "gemini",
         "id": "gemini-3.1-flash-lite"
       },
@@ -1018,11 +918,19 @@
       },
       {
         "provider": "openrouter",
+        "id": "inclusionai/ling-3.0-flash-fin:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
       },
       {
         "provider": "openrouter",
-        "id": "nvidia/nemotron-3-nano-30b-a3b:free"
+        "id": "minimax/minimax-m2.7:free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "minimax/minimax-m3:free"
       },
       {
         "provider": "openrouter",
@@ -1039,14 +947,6 @@
       {
         "provider": "openrouter",
         "id": "nvidia/nemotron-3.5-lightning:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "nvidia/nemotron-nano-12b-v2-vl:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "nvidia/nemotron-nano-9b-v2:free"
       },
       {
         "provider": "openrouter",
@@ -1187,10 +1087,6 @@
       {
         "provider": "mistral",
         "id": "devstral-medium-latest"
-      },
-      {
-        "provider": "mistral",
-        "id": "glm-5-2"
       },
       {
         "provider": "mistral",
@@ -1371,10 +1267,6 @@
       {
         "provider": "mistral",
         "id": "voxtral-small-latest"
-      },
-      {
-        "provider": "mistral",
-        "id": "zai-glm-5-2"
       }
     ],
     "removed": []
