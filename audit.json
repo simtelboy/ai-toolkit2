@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-08-29",
-  "generatedAt": "2026-08-29T03:50:12.348Z",
-  "totalModels": 130,
+  "date": "2026-09-01",
+  "generatedAt": "2026-09-01T01:22:54.941Z",
+  "totalModels": 126,
   "providers": [
     {
       "id": "nvidia",
@@ -416,7 +416,7 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 4,
+      "count": 6,
       "error": null,
       "models": [
         {
@@ -425,8 +425,18 @@
           "contextWindow": null
         },
         {
+          "id": "deepseek-v4-pro",
+          "displayName": "deepseek-v4-pro",
+          "contextWindow": null
+        },
+        {
           "id": "glm-5.2",
           "displayName": "glm-5.2",
+          "contextWindow": null
+        },
+        {
+          "id": "kimi-k3",
+          "displayName": "kimi-k3",
           "contextWindow": null
         },
         {
@@ -505,7 +515,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 51,
+      "count": 45,
       "error": null,
       "models": [
         {
@@ -521,21 +531,6 @@
         {
           "id": "codestral-latest",
           "displayName": "codestral-latest",
-          "contextWindow": null
-        },
-        {
-          "id": "devstral-2512",
-          "displayName": "devstral-2512",
-          "contextWindow": null
-        },
-        {
-          "id": "devstral-latest",
-          "displayName": "devstral-latest",
-          "contextWindow": null
-        },
-        {
-          "id": "devstral-medium-latest",
-          "displayName": "devstral-medium-latest",
           "contextWindow": null
         },
         {
@@ -589,11 +584,6 @@
           "contextWindow": null
         },
         {
-          "id": "mistral-code-agent-latest",
-          "displayName": "mistral-code-agent-latest",
-          "contextWindow": null
-        },
-        {
           "id": "mistral-code-fim-latest",
           "displayName": "mistral-code-fim-latest",
           "contextWindow": null
@@ -621,16 +611,6 @@
         {
           "id": "mistral-medium",
           "displayName": "mistral-medium",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-medium-2505",
-          "displayName": "mistral-medium-2505",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-medium-2508",
-          "displayName": "mistral-medium-2508",
           "contextWindow": null
         },
         {
@@ -774,7 +754,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-08-24",
+    "comparedWith": "2026-08-29",
     "added": [
       {
         "provider": "nvidia",
@@ -1018,7 +998,15 @@
       },
       {
         "provider": "sensenova",
+        "id": "deepseek-v4-pro"
+      },
+      {
+        "provider": "sensenova",
         "id": "glm-5.2"
+      },
+      {
+        "provider": "sensenova",
+        "id": "kimi-k3"
       },
       {
         "provider": "sensenova",
@@ -1078,18 +1066,6 @@
       },
       {
         "provider": "mistral",
-        "id": "devstral-2512"
-      },
-      {
-        "provider": "mistral",
-        "id": "devstral-latest"
-      },
-      {
-        "provider": "mistral",
-        "id": "devstral-medium-latest"
-      },
-      {
-        "provider": "mistral",
         "id": "labs-leanstral-1-5"
       },
       {
@@ -1130,10 +1106,6 @@
       },
       {
         "provider": "mistral",
-        "id": "mistral-code-agent-latest"
-      },
-      {
-        "provider": "mistral",
         "id": "mistral-code-fim-latest"
       },
       {
@@ -1155,14 +1127,6 @@
       {
         "provider": "mistral",
         "id": "mistral-medium"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-medium-2505"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-medium-2508"
       },
       {
         "provider": "mistral",
