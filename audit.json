@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-01",
-  "generatedAt": "2026-09-01T01:22:54.941Z",
-  "totalModels": 126,
+  "date": "2026-09-02",
+  "generatedAt": "2026-09-02T00:28:59.683Z",
+  "totalModels": 125,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 14,
+      "count": 13,
       "error": null,
       "models": [
         {
@@ -43,11 +43,6 @@
         {
           "id": "nvidia/ising-calibration-1.5-31b",
           "displayName": "nvidia/ising-calibration-1.5-31b",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/nemotron-3-nano-30b-a3b",
-          "displayName": "nvidia/nemotron-3-nano-30b-a3b",
           "contextWindow": null
         },
         {
@@ -754,7 +749,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-08-29",
+    "comparedWith": "2026-09-01",
     "added": [
       {
         "provider": "nvidia",
@@ -783,10 +778,6 @@
       {
         "provider": "nvidia",
         "id": "nvidia/ising-calibration-1.5-31b"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/nemotron-3-nano-30b-a3b"
       },
       {
         "provider": "nvidia",
