@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-02",
-  "generatedAt": "2026-09-02T00:28:59.683Z",
+  "date": "2026-09-05",
+  "generatedAt": "2026-09-05T00:20:22.228Z",
   "totalModels": 125,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 13,
+      "count": 12,
       "error": null,
       "models": [
         {
@@ -63,11 +63,6 @@
         {
           "id": "nvidia/riva-translate-4b-instruct-v1.1",
           "displayName": "nvidia/riva-translate-4b-instruct-v1.1",
-          "contextWindow": null
-        },
-        {
-          "id": "openai/gpt-oss-120b",
-          "displayName": "openai/gpt-oss-120b",
           "contextWindow": null
         },
         {
@@ -181,7 +176,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 18,
+      "count": 19,
       "error": null,
       "models": [
         {
@@ -206,7 +201,12 @@
         },
         {
           "id": "inclusionai/ling-3.0-flash-fin:free",
-          "displayName": "Ling 3.0 Flash Fin (free)",
+          "displayName": "inclusionAI: Ling 3.0 Flash Fin (free)",
+          "contextWindow": 262144
+        },
+        {
+          "id": "inclusionai/ling-3.0-flash-sante:free",
+          "displayName": "inclusionAI: Ling 3.0 Flash Sante (free)",
           "contextWindow": 262144
         },
         {
@@ -393,7 +393,7 @@
     {
       "id": "huggingface",
       "status": "ok",
-      "count": 2,
+      "count": 3,
       "error": null,
       "models": [
         {
@@ -404,6 +404,11 @@
         {
           "id": "prism-ml/Ternary-Bonsai-27B-gguf",
           "displayName": "prism-ml/Ternary-Bonsai-27B-gguf",
+          "contextWindow": 262144
+        },
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "displayName": "Qwen/Qwen3.8-27B",
           "contextWindow": 262144
         }
       ]
@@ -449,7 +454,7 @@
     {
       "id": "cerebras",
       "status": "ok",
-      "count": 2,
+      "count": 3,
       "error": null,
       "models": [
         {
@@ -460,6 +465,11 @@
         {
           "id": "gpt-oss-120b",
           "displayName": "gpt-oss-120b",
+          "contextWindow": null
+        },
+        {
+          "id": "qwen-3.8-27b",
+          "displayName": "qwen-3.8-27b",
           "contextWindow": null
         }
       ]
@@ -510,7 +520,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 45,
+      "count": 43,
       "error": null,
       "models": [
         {
@@ -591,16 +601,6 @@
         {
           "id": "mistral-embed",
           "displayName": "mistral-embed",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-large-2512",
-          "displayName": "mistral-large-2512",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-large-latest",
-          "displayName": "mistral-large-latest",
           "contextWindow": null
         },
         {
@@ -749,7 +749,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-01",
+    "comparedWith": "2026-09-02",
     "added": [
       {
         "provider": "nvidia",
@@ -794,10 +794,6 @@
       {
         "provider": "nvidia",
         "id": "nvidia/riva-translate-4b-instruct-v1.1"
-      },
-      {
-        "provider": "nvidia",
-        "id": "openai/gpt-oss-120b"
       },
       {
         "provider": "nvidia",
@@ -893,6 +889,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "inclusionai/ling-3.0-flash-sante:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
       },
       {
@@ -984,6 +984,10 @@
         "id": "prism-ml/Ternary-Bonsai-27B-gguf"
       },
       {
+        "provider": "huggingface",
+        "id": "Qwen/Qwen3.8-27B"
+      },
+      {
         "provider": "sensenova",
         "id": "deepseek-v4-flash"
       },
@@ -1014,6 +1018,10 @@
       {
         "provider": "cerebras",
         "id": "gpt-oss-120b"
+      },
+      {
+        "provider": "cerebras",
+        "id": "qwen-3.8-27b"
       },
       {
         "provider": "sambanova",
@@ -1106,14 +1114,6 @@
       {
         "provider": "mistral",
         "id": "mistral-embed"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-large-2512"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-large-latest"
       },
       {
         "provider": "mistral",

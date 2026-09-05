@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-02",
+  "audited_at": "2026-09-05",
   "providers": [
     {
       "id": "2d06tu",
@@ -21,7 +21,6 @@
         "nvidia/nemotron-3-super-120b-a12b",
         "nvidia/nemotron-3-ultra-550b-a55b",
         "nvidia/riva-translate-4b-instruct-v1.1",
-        "openai/gpt-oss-120b",
         "openai/gpt-oss-20b"
       ]
     },
@@ -103,6 +102,10 @@
         },
         {
           "name": "inclusionai/ling-3.0-flash-fin:free",
+          "context_window": 262144
+        },
+        {
+          "name": "inclusionai/ling-3.0-flash-sante:free",
           "context_window": 262144
         },
         {
@@ -247,6 +250,10 @@
         {
           "name": "prism-ml/Ternary-Bonsai-27B-gguf",
           "context_window": 262144
+        },
+        {
+          "name": "Qwen/Qwen3.8-27B",
+          "context_window": 262144
         }
       ]
     },
@@ -275,7 +282,8 @@
       "status": "ok",
       "models": [
         "gemma-4-31b",
-        "gpt-oss-120b"
+        "gpt-oss-120b",
+        "qwen-3.8-27b"
       ]
     },
     {
@@ -319,8 +327,6 @@
         "mistral-code-fim-latest",
         "mistral-code-latest",
         "mistral-embed",
-        "mistral-large-2512",
-        "mistral-large-latest",
         "mistral-medium",
         "mistral-medium-2604",
         "mistral-medium-3",
