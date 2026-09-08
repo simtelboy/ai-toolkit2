@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-05",
+  "audited_at": "2026-09-08",
   "providers": [
     {
       "id": "2d06tu",
@@ -113,14 +113,6 @@
           "context_window": 65536
         },
         {
-          "name": "minimax/minimax-m2.7:free",
-          "context_window": 196608
-        },
-        {
-          "name": "minimax/minimax-m3:free",
-          "context_window": 1048576
-        },
-        {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
           "context_window": 256000
         },
@@ -155,10 +147,6 @@
         {
           "name": "thinkingmachines/inkling:free",
           "context_window": 1048576
-        },
-        {
-          "name": "z-ai/glm-5.2:free",
-          "context_window": 256000
         }
       ]
     },

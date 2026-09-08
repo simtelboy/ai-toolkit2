@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-05",
-  "generatedAt": "2026-09-05T00:20:22.228Z",
-  "totalModels": 125,
+  "date": "2026-09-08",
+  "generatedAt": "2026-09-08T00:38:47.770Z",
+  "totalModels": 122,
   "providers": [
     {
       "id": "nvidia",
@@ -176,7 +176,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 19,
+      "count": 16,
       "error": null,
       "models": [
         {
@@ -213,16 +213,6 @@
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
-        },
-        {
-          "id": "minimax/minimax-m2.7:free",
-          "displayName": "MiniMax: MiniMax M2.7 (free)",
-          "contextWindow": 196608
-        },
-        {
-          "id": "minimax/minimax-m3:free",
-          "displayName": "MiniMax: MiniMax M3 (free)",
-          "contextWindow": 1048576
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -268,11 +258,6 @@
           "id": "thinkingmachines/inkling:free",
           "displayName": "Thinking Machines: Inkling (free)",
           "contextWindow": 1048576
-        },
-        {
-          "id": "z-ai/glm-5.2:free",
-          "displayName": "Z.ai: GLM 5.2 (free)",
-          "contextWindow": 256000
         }
       ]
     },
@@ -749,7 +734,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-02",
+    "comparedWith": "2026-09-05",
     "added": [
       {
         "provider": "nvidia",
@@ -897,14 +882,6 @@
       },
       {
         "provider": "openrouter",
-        "id": "minimax/minimax-m2.7:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "minimax/minimax-m3:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
       },
       {
@@ -938,10 +915,6 @@
       {
         "provider": "openrouter",
         "id": "thinkingmachines/inkling:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "z-ai/glm-5.2:free"
       },
       {
         "provider": "siliconflow",
