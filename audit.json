@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-08",
-  "generatedAt": "2026-09-08T00:38:47.770Z",
-  "totalModels": 122,
+  "date": "2026-09-11",
+  "generatedAt": "2026-09-11T00:29:28.513Z",
+  "totalModels": 126,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 12,
+      "count": 11,
       "error": null,
       "models": [
         {
@@ -28,11 +28,6 @@
         {
           "id": "meta/llama-3.2-90b-vision-instruct",
           "displayName": "meta/llama-3.2-90b-vision-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "minimaxai/minimax-m3",
-          "displayName": "minimaxai/minimax-m3",
           "contextWindow": null
         },
         {
@@ -176,7 +171,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 16,
+      "count": 19,
       "error": null,
       "models": [
         {
@@ -210,9 +205,24 @@
           "contextWindow": 262144
         },
         {
+          "id": "inclusionai/ling-3.0-flash-vl:free",
+          "displayName": "inclusionAI: Ling 3.0 Flash VL (free)",
+          "contextWindow": 262144
+        },
+        {
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
+        },
+        {
+          "id": "nex-agi/nex-n2.5-mini:free",
+          "displayName": "Nex AGI: Nex-N2.5-Mini (free)",
+          "contextWindow": 262144
+        },
+        {
+          "id": "nex-agi/nex-n2.5-pro:free",
+          "displayName": "Nex AGI: Nex-N2.5-Pro (free)",
+          "contextWindow": 262144
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -378,9 +388,19 @@
     {
       "id": "huggingface",
       "status": "ok",
-      "count": 3,
+      "count": 5,
       "error": null,
       "models": [
+        {
+          "id": "inclusionAI/Ling-3.0-flash-Fin",
+          "displayName": "inclusionAI/Ling-3.0-flash-Fin",
+          "contextWindow": 262144
+        },
+        {
+          "id": "inclusionAI/Ling-3.0-flash-VL",
+          "displayName": "inclusionAI/Ling-3.0-flash-VL",
+          "contextWindow": 262144
+        },
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
           "displayName": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -734,7 +754,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-05",
+    "comparedWith": "2026-09-08",
     "added": [
       {
         "provider": "nvidia",
@@ -751,10 +771,6 @@
       {
         "provider": "nvidia",
         "id": "meta/llama-3.2-90b-vision-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "minimaxai/minimax-m3"
       },
       {
         "provider": "nvidia",
@@ -878,7 +894,19 @@
       },
       {
         "provider": "openrouter",
+        "id": "inclusionai/ling-3.0-flash-vl:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "nex-agi/nex-n2.5-mini:free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "nex-agi/nex-n2.5-pro:free"
       },
       {
         "provider": "openrouter",
@@ -947,6 +975,14 @@
       {
         "provider": "cohere",
         "id": "north-mini-code-1-0"
+      },
+      {
+        "provider": "huggingface",
+        "id": "inclusionAI/Ling-3.0-flash-Fin"
+      },
+      {
+        "provider": "huggingface",
+        "id": "inclusionAI/Ling-3.0-flash-VL"
       },
       {
         "provider": "huggingface",

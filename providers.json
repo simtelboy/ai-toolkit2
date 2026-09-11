@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-08",
+  "audited_at": "2026-09-11",
   "providers": [
     {
       "id": "2d06tu",
@@ -14,7 +14,6 @@
         "google/gemma-4-31b-it",
         "meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-90b-vision-instruct",
-        "minimaxai/minimax-m3",
         "mistralai/mistral-nemotron",
         "nvidia/ising-calibration-1.5-31b",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -109,8 +108,20 @@
           "context_window": 262144
         },
         {
+          "name": "inclusionai/ling-3.0-flash-vl:free",
+          "context_window": 262144
+        },
+        {
           "name": "liquid/lfm-2.5-2.6b:free",
           "context_window": 65536
+        },
+        {
+          "name": "nex-agi/nex-n2.5-mini:free",
+          "context_window": 262144
+        },
+        {
+          "name": "nex-agi/nex-n2.5-pro:free",
+          "context_window": 262144
         },
         {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -231,6 +242,14 @@
       "register_url": "https://huggingface.co/join",
       "status": "ok",
       "models": [
+        {
+          "name": "inclusionAI/Ling-3.0-flash-Fin",
+          "context_window": 262144
+        },
+        {
+          "name": "inclusionAI/Ling-3.0-flash-VL",
+          "context_window": 262144
+        },
         {
           "name": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
           "context_window": 262144
