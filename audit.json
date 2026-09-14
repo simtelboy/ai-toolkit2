@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-11",
-  "generatedAt": "2026-09-11T00:29:28.513Z",
+  "date": "2026-09-14",
+  "generatedAt": "2026-09-14T00:22:32.589Z",
   "totalModels": 126,
   "providers": [
     {
@@ -308,7 +308,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 130 entries but none matched the free whitelist",
+      "error": "volcengine list models returned 131 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -754,7 +754,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-08",
+    "comparedWith": "2026-09-11",
     "added": [
       {
         "provider": "nvidia",
