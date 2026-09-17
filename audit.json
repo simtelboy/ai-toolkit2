@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-14",
-  "generatedAt": "2026-09-14T00:22:32.589Z",
-  "totalModels": 126,
+  "date": "2026-09-17",
+  "generatedAt": "2026-09-17T00:51:14.086Z",
+  "totalModels": 125,
   "providers": [
     {
       "id": "nvidia",
@@ -70,7 +70,7 @@
     {
       "id": "groq",
       "status": "ok",
-      "count": 12,
+      "count": 11,
       "error": null,
       "models": [
         {
@@ -124,11 +124,6 @@
           "contextWindow": null
         },
         {
-          "id": "qwen/qwen3.6-27b",
-          "displayName": "qwen/qwen3.6-27b",
-          "contextWindow": null
-        },
-        {
           "id": "qwen/qwen3.8-27b",
           "displayName": "qwen/qwen3.8-27b",
           "contextWindow": null
@@ -171,7 +166,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 19,
+      "count": 20,
       "error": null,
       "models": [
         {
@@ -268,6 +263,11 @@
           "id": "thinkingmachines/inkling:free",
           "displayName": "Thinking Machines: Inkling (free)",
           "contextWindow": 1048576
+        },
+        {
+          "id": "z-ai/glm-5.2:free",
+          "displayName": "Z.ai: GLM 5.2 (free)",
+          "contextWindow": 32768
         }
       ]
     },
@@ -308,7 +308,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 131 entries but none matched the free whitelist",
+      "error": "volcengine list models returned 133 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -459,14 +459,9 @@
     {
       "id": "cerebras",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "error": null,
       "models": [
-        {
-          "id": "gemma-4-31b",
-          "displayName": "gemma-4-31b",
-          "contextWindow": null
-        },
         {
           "id": "gpt-oss-120b",
           "displayName": "gpt-oss-120b",
@@ -754,7 +749,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-11",
+    "comparedWith": "2026-09-14",
     "added": [
       {
         "provider": "nvidia",
@@ -839,10 +834,6 @@
       {
         "provider": "groq",
         "id": "openai/gpt-oss-safeguard-20b"
-      },
-      {
-        "provider": "groq",
-        "id": "qwen/qwen3.6-27b"
       },
       {
         "provider": "groq",
@@ -945,6 +936,10 @@
         "id": "thinkingmachines/inkling:free"
       },
       {
+        "provider": "openrouter",
+        "id": "z-ai/glm-5.2:free"
+      },
+      {
         "provider": "siliconflow",
         "id": "Qwen/Qwen2.5-7B-Instruct"
       },
@@ -1019,10 +1014,6 @@
       {
         "provider": "sensenova",
         "id": "sensenova-6.8-flash-lite"
-      },
-      {
-        "provider": "cerebras",
-        "id": "gemma-4-31b"
       },
       {
         "provider": "cerebras",

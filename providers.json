@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-14",
+  "audited_at": "2026-09-17",
   "providers": [
     {
       "id": "2d06tu",
@@ -41,7 +41,6 @@
         "openai/gpt-oss-120b",
         "openai/gpt-oss-20b",
         "openai/gpt-oss-safeguard-20b",
-        "qwen/qwen3.6-27b",
         "qwen/qwen3.8-27b"
       ]
     },
@@ -158,6 +157,10 @@
         {
           "name": "thinkingmachines/inkling:free",
           "context_window": 1048576
+        },
+        {
+          "name": "z-ai/glm-5.2:free",
+          "context_window": 32768
         }
       ]
     },
@@ -288,7 +291,6 @@
       "register_url": "https://cloud.cerebras.ai/",
       "status": "ok",
       "models": [
-        "gemma-4-31b",
         "gpt-oss-120b",
         "qwen-3.8-27b"
       ]
