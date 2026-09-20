@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-17",
-  "generatedAt": "2026-09-17T00:51:14.086Z",
-  "totalModels": 125,
+  "date": "2026-09-20",
+  "generatedAt": "2026-09-20T00:20:20.568Z",
+  "totalModels": 126,
   "providers": [
     {
       "id": "nvidia",
@@ -166,13 +166,18 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 20,
+      "count": 22,
       "error": null,
       "models": [
         {
           "id": "cohere/north-mini-code:free",
           "displayName": "Cohere: North Mini Code (free)",
           "contextWindow": 256000
+        },
+        {
+          "id": "deepseek/deepseek-v4-flash-0731:free",
+          "displayName": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
+          "contextWindow": 1048576
         },
         {
           "id": "dots-studio/dots-3-note-preview:free",
@@ -252,6 +257,11 @@
         {
           "id": "poolside/laguna-xs-2.1:free",
           "displayName": "Poolside: Laguna XS 2.1 (free)",
+          "contextWindow": 262144
+        },
+        {
+          "id": "qwen/qwen3.8-27b:free",
+          "displayName": "Qwen: Qwen3.8 27B (free)",
           "contextWindow": 262144
         },
         {
@@ -388,7 +398,7 @@
     {
       "id": "huggingface",
       "status": "ok",
-      "count": 5,
+      "count": 4,
       "error": null,
       "models": [
         {
@@ -409,11 +419,6 @@
         {
           "id": "prism-ml/Ternary-Bonsai-27B-gguf",
           "displayName": "prism-ml/Ternary-Bonsai-27B-gguf",
-          "contextWindow": 262144
-        },
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "displayName": "Qwen/Qwen3.8-27B",
           "contextWindow": 262144
         }
       ]
@@ -749,7 +754,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-14",
+    "comparedWith": "2026-09-17",
     "added": [
       {
         "provider": "nvidia",
@@ -865,6 +870,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "deepseek/deepseek-v4-flash-0731:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "dots-studio/dots-3-note-preview:free"
       },
       {
@@ -929,6 +938,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "qwen/qwen3.8-27b:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "thinkingmachines/inkling-small:free"
       },
       {
@@ -986,10 +999,6 @@
       {
         "provider": "huggingface",
         "id": "prism-ml/Ternary-Bonsai-27B-gguf"
-      },
-      {
-        "provider": "huggingface",
-        "id": "Qwen/Qwen3.8-27B"
       },
       {
         "provider": "sensenova",
