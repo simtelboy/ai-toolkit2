@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-20",
+  "audited_at": "2026-09-23",
   "providers": [
     {
       "id": "2d06tu",
@@ -34,8 +34,6 @@
         "allam-2-7b",
         "canopylabs/orpheus-arabic-saudi",
         "canopylabs/orpheus-v1-english",
-        "groq/compound",
-        "groq/compound-mini",
         "meta-llama/llama-prompt-guard-2-22m",
         "meta-llama/llama-prompt-guard-2-86m",
         "openai/gpt-oss-120b",
@@ -85,10 +83,6 @@
         {
           "name": "cohere/north-mini-code:free",
           "context_window": 256000
-        },
-        {
-          "name": "deepseek/deepseek-v4-flash-0731:free",
-          "context_window": 1048576
         },
         {
           "name": "dots-studio/dots-3-note-preview:free",
@@ -279,11 +273,12 @@
       "register_url": "https://platform.sensenova.cn/",
       "status": "ok",
       "models": [
+        "deepseek-flash",
         "deepseek-v4-flash",
         "deepseek-v4-pro",
+        "deepseek-v4.1-flash",
         "glm-5.2",
         "kimi-k3",
-        "sensenova-6.7-flash-lite",
         "sensenova-6.8-flash-lite"
       ]
     },

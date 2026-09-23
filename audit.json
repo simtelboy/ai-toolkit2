@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-20",
-  "generatedAt": "2026-09-20T00:20:20.568Z",
-  "totalModels": 126,
+  "date": "2026-09-23",
+  "generatedAt": "2026-09-23T00:53:26.707Z",
+  "totalModels": 124,
   "providers": [
     {
       "id": "nvidia",
@@ -70,7 +70,7 @@
     {
       "id": "groq",
       "status": "ok",
-      "count": 11,
+      "count": 9,
       "error": null,
       "models": [
         {
@@ -86,16 +86,6 @@
         {
           "id": "canopylabs/orpheus-v1-english",
           "displayName": "canopylabs/orpheus-v1-english",
-          "contextWindow": null
-        },
-        {
-          "id": "groq/compound",
-          "displayName": "groq/compound",
-          "contextWindow": null
-        },
-        {
-          "id": "groq/compound-mini",
-          "displayName": "groq/compound-mini",
           "contextWindow": null
         },
         {
@@ -166,18 +156,13 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 22,
+      "count": 21,
       "error": null,
       "models": [
         {
           "id": "cohere/north-mini-code:free",
           "displayName": "Cohere: North Mini Code (free)",
           "contextWindow": 256000
-        },
-        {
-          "id": "deepseek/deepseek-v4-flash-0731:free",
-          "displayName": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
-          "contextWindow": 1048576
         },
         {
           "id": "dots-studio/dots-3-note-preview:free",
@@ -318,7 +303,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 133 entries but none matched the free whitelist",
+      "error": "volcengine list models returned 135 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -426,9 +411,14 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 6,
+      "count": 7,
       "error": null,
       "models": [
+        {
+          "id": "deepseek-flash",
+          "displayName": "deepseek-flash",
+          "contextWindow": null
+        },
         {
           "id": "deepseek-v4-flash",
           "displayName": "deepseek-v4-flash",
@@ -440,6 +430,11 @@
           "contextWindow": null
         },
         {
+          "id": "deepseek-v4.1-flash",
+          "displayName": "deepseek-v4.1-flash",
+          "contextWindow": null
+        },
+        {
           "id": "glm-5.2",
           "displayName": "glm-5.2",
           "contextWindow": null
@@ -447,11 +442,6 @@
         {
           "id": "kimi-k3",
           "displayName": "kimi-k3",
-          "contextWindow": null
-        },
-        {
-          "id": "sensenova-6.7-flash-lite",
-          "displayName": "sensenova-6.7-flash-lite",
           "contextWindow": null
         },
         {
@@ -754,7 +744,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-17",
+    "comparedWith": "2026-09-20",
     "added": [
       {
         "provider": "nvidia",
@@ -814,14 +804,6 @@
       },
       {
         "provider": "groq",
-        "id": "groq/compound"
-      },
-      {
-        "provider": "groq",
-        "id": "groq/compound-mini"
-      },
-      {
-        "provider": "groq",
         "id": "meta-llama/llama-prompt-guard-2-22m"
       },
       {
@@ -867,10 +849,6 @@
       {
         "provider": "openrouter",
         "id": "cohere/north-mini-code:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "deepseek/deepseek-v4-flash-0731:free"
       },
       {
         "provider": "openrouter",
@@ -1002,6 +980,10 @@
       },
       {
         "provider": "sensenova",
+        "id": "deepseek-flash"
+      },
+      {
+        "provider": "sensenova",
         "id": "deepseek-v4-flash"
       },
       {
@@ -1010,15 +992,15 @@
       },
       {
         "provider": "sensenova",
+        "id": "deepseek-v4.1-flash"
+      },
+      {
+        "provider": "sensenova",
         "id": "glm-5.2"
       },
       {
         "provider": "sensenova",
         "id": "kimi-k3"
-      },
-      {
-        "provider": "sensenova",
-        "id": "sensenova-6.7-flash-lite"
       },
       {
         "provider": "sensenova",
