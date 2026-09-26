@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-23",
-  "generatedAt": "2026-09-23T00:53:26.707Z",
-  "totalModels": 124,
+  "date": "2026-09-26",
+  "generatedAt": "2026-09-26T00:49:47.986Z",
+  "totalModels": 119,
   "providers": [
     {
       "id": "nvidia",
@@ -156,7 +156,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 21,
+      "count": 17,
       "error": null,
       "models": [
         {
@@ -190,24 +190,9 @@
           "contextWindow": 262144
         },
         {
-          "id": "inclusionai/ling-3.0-flash-vl:free",
-          "displayName": "inclusionAI: Ling 3.0 Flash VL (free)",
-          "contextWindow": 262144
-        },
-        {
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
-        },
-        {
-          "id": "nex-agi/nex-n2.5-mini:free",
-          "displayName": "Nex AGI: Nex-N2.5-Mini (free)",
-          "contextWindow": 262144
-        },
-        {
-          "id": "nex-agi/nex-n2.5-pro:free",
-          "displayName": "Nex AGI: Nex-N2.5-Pro (free)",
-          "contextWindow": 262144
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -258,11 +243,6 @@
           "id": "thinkingmachines/inkling:free",
           "displayName": "Thinking Machines: Inkling (free)",
           "contextWindow": 1048576
-        },
-        {
-          "id": "z-ai/glm-5.2:free",
-          "displayName": "Z.ai: GLM 5.2 (free)",
-          "contextWindow": 32768
         }
       ]
     },
@@ -383,17 +363,12 @@
     {
       "id": "huggingface",
       "status": "ok",
-      "count": 4,
+      "count": 3,
       "error": null,
       "models": [
         {
           "id": "inclusionAI/Ling-3.0-flash-Fin",
           "displayName": "inclusionAI/Ling-3.0-flash-Fin",
-          "contextWindow": 262144
-        },
-        {
-          "id": "inclusionAI/Ling-3.0-flash-VL",
-          "displayName": "inclusionAI/Ling-3.0-flash-VL",
           "contextWindow": 262144
         },
         {
@@ -744,7 +719,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-20",
+    "comparedWith": "2026-09-23",
     "added": [
       {
         "provider": "nvidia",
@@ -872,19 +847,7 @@
       },
       {
         "provider": "openrouter",
-        "id": "inclusionai/ling-3.0-flash-vl:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "nex-agi/nex-n2.5-mini:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "nex-agi/nex-n2.5-pro:free"
       },
       {
         "provider": "openrouter",
@@ -927,10 +890,6 @@
         "id": "thinkingmachines/inkling:free"
       },
       {
-        "provider": "openrouter",
-        "id": "z-ai/glm-5.2:free"
-      },
-      {
         "provider": "siliconflow",
         "id": "Qwen/Qwen2.5-7B-Instruct"
       },
@@ -965,10 +924,6 @@
       {
         "provider": "huggingface",
         "id": "inclusionAI/Ling-3.0-flash-Fin"
-      },
-      {
-        "provider": "huggingface",
-        "id": "inclusionAI/Ling-3.0-flash-VL"
       },
       {
         "provider": "huggingface",
