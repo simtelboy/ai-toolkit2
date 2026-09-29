@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-26",
-  "generatedAt": "2026-09-26T00:49:47.986Z",
-  "totalModels": 119,
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29T02:15:32.841Z",
+  "totalModels": 116,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 11,
+      "count": 10,
       "error": null,
       "models": [
         {
@@ -28,11 +28,6 @@
         {
           "id": "meta/llama-3.2-90b-vision-instruct",
           "displayName": "meta/llama-3.2-90b-vision-instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "mistralai/mistral-nemotron",
-          "displayName": "mistralai/mistral-nemotron",
           "contextWindow": null
         },
         {
@@ -156,7 +151,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 17,
+      "count": 16,
       "error": null,
       "models": [
         {
@@ -177,11 +172,6 @@
         {
           "id": "google/gemma-4-31b-it:free",
           "displayName": "Google: Gemma 4 31B (free)",
-          "contextWindow": 262144
-        },
-        {
-          "id": "inclusionai/ling-3.0-flash-fin:free",
-          "displayName": "inclusionAI: Ling 3.0 Flash Fin (free)",
           "contextWindow": 262144
         },
         {
@@ -363,14 +353,9 @@
     {
       "id": "huggingface",
       "status": "ok",
-      "count": 3,
+      "count": 2,
       "error": null,
       "models": [
-        {
-          "id": "inclusionAI/Ling-3.0-flash-Fin",
-          "displayName": "inclusionAI/Ling-3.0-flash-Fin",
-          "contextWindow": 262144
-        },
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
           "displayName": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -719,7 +704,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-23",
+    "comparedWith": "2026-09-26",
     "added": [
       {
         "provider": "nvidia",
@@ -736,10 +721,6 @@
       {
         "provider": "nvidia",
         "id": "meta/llama-3.2-90b-vision-instruct"
-      },
-      {
-        "provider": "nvidia",
-        "id": "mistralai/mistral-nemotron"
       },
       {
         "provider": "nvidia",
@@ -839,10 +820,6 @@
       },
       {
         "provider": "openrouter",
-        "id": "inclusionai/ling-3.0-flash-fin:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "inclusionai/ling-3.0-flash-sante:free"
       },
       {
@@ -920,10 +897,6 @@
       {
         "provider": "cohere",
         "id": "north-mini-code-1-0"
-      },
-      {
-        "provider": "huggingface",
-        "id": "inclusionAI/Ling-3.0-flash-Fin"
       },
       {
         "provider": "huggingface",

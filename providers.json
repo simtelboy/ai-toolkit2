@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-26",
+  "audited_at": "2026-09-29",
   "providers": [
     {
       "id": "2d06tu",
@@ -14,7 +14,6 @@
         "google/gemma-4-31b-it",
         "meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-90b-vision-instruct",
-        "mistralai/mistral-nemotron",
         "nvidia/ising-calibration-1.5-31b",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
         "nvidia/nemotron-3-super-120b-a12b",
@@ -94,10 +93,6 @@
         },
         {
           "name": "google/gemma-4-31b-it:free",
-          "context_window": 262144
-        },
-        {
-          "name": "inclusionai/ling-3.0-flash-fin:free",
           "context_window": 262144
         },
         {
@@ -231,10 +226,6 @@
       "register_url": "https://huggingface.co/join",
       "status": "ok",
       "models": [
-        {
-          "name": "inclusionAI/Ling-3.0-flash-Fin",
-          "context_window": 262144
-        },
         {
           "name": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
           "context_window": 262144
