@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-09-29",
+  "audited_at": "2026-10-02",
   "providers": [
     {
       "id": "2d06tu",
@@ -79,6 +79,10 @@
       "register_url": "https://openrouter.ai/",
       "status": "ok",
       "models": [
+        {
+          "name": "apodex/apodex-1.1-mini:free",
+          "context_window": 262144
+        },
         {
           "name": "cohere/north-mini-code:free",
           "context_window": 256000
@@ -244,13 +248,18 @@
       "register_url": "https://platform.sensenova.cn/",
       "status": "ok",
       "models": [
-        "deepseek-flash",
-        "deepseek-v4-flash",
-        "deepseek-v4-pro",
-        "deepseek-v4.1-flash",
-        "glm-5.2",
-        "kimi-k3",
-        "sensenova-6.8-flash-lite"
+        {
+          "name": "deepseek-v4-flash",
+          "context_window": 1048576
+        },
+        {
+          "name": "glm-5.2",
+          "context_window": 1048576
+        },
+        {
+          "name": "sensenova-6.7-flash-lite",
+          "context_window": 262144
+        }
       ]
     },
     {
@@ -278,7 +287,6 @@
         "gemma-4-31B-it",
         "gpt-oss-120b",
         "Meta-Llama-3.3-70B-Instruct",
-        "MiniMax-M2.7",
         "MiniMax-M3"
       ]
     },

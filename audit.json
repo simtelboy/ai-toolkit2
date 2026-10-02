@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-09-29",
-  "generatedAt": "2026-09-29T02:15:32.841Z",
-  "totalModels": 116,
+  "date": "2026-10-02",
+  "generatedAt": "2026-10-02T01:47:50.729Z",
+  "totalModels": 112,
   "providers": [
     {
       "id": "nvidia",
@@ -151,9 +151,14 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 16,
+      "count": 17,
       "error": null,
       "models": [
+        {
+          "id": "apodex/apodex-1.1-mini:free",
+          "displayName": "Apodex: Apodex 1.1 Mini (free)",
+          "contextWindow": 262144
+        },
         {
           "id": "cohere/north-mini-code:free",
           "displayName": "Cohere: North Mini Code (free)",
@@ -371,43 +376,23 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 7,
+      "count": 3,
       "error": null,
       "models": [
         {
-          "id": "deepseek-flash",
-          "displayName": "deepseek-flash",
-          "contextWindow": null
-        },
-        {
           "id": "deepseek-v4-flash",
           "displayName": "deepseek-v4-flash",
-          "contextWindow": null
-        },
-        {
-          "id": "deepseek-v4-pro",
-          "displayName": "deepseek-v4-pro",
-          "contextWindow": null
-        },
-        {
-          "id": "deepseek-v4.1-flash",
-          "displayName": "deepseek-v4.1-flash",
-          "contextWindow": null
+          "contextWindow": 1048576
         },
         {
           "id": "glm-5.2",
           "displayName": "glm-5.2",
-          "contextWindow": null
+          "contextWindow": 1048576
         },
         {
-          "id": "kimi-k3",
-          "displayName": "kimi-k3",
-          "contextWindow": null
-        },
-        {
-          "id": "sensenova-6.8-flash-lite",
-          "displayName": "sensenova-6.8-flash-lite",
-          "contextWindow": null
+          "id": "sensenova-6.7-flash-lite",
+          "displayName": "sensenova-6.7-flash-lite",
+          "contextWindow": 262144
         }
       ]
     },
@@ -432,7 +417,7 @@
     {
       "id": "sambanova",
       "status": "ok",
-      "count": 7,
+      "count": 6,
       "error": null,
       "models": [
         {
@@ -458,11 +443,6 @@
         {
           "id": "Meta-Llama-3.3-70B-Instruct",
           "displayName": "Meta-Llama-3.3-70B-Instruct",
-          "contextWindow": null
-        },
-        {
-          "id": "MiniMax-M2.7",
-          "displayName": "MiniMax-M2.7",
           "contextWindow": null
         },
         {
@@ -704,7 +684,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-26",
+    "comparedWith": "2026-09-29",
     "added": [
       {
         "provider": "nvidia",
@@ -801,6 +781,10 @@
       {
         "provider": "gemini",
         "id": "gemma-4-31b-it"
+      },
+      {
+        "provider": "openrouter",
+        "id": "apodex/apodex-1.1-mini:free"
       },
       {
         "provider": "openrouter",
@@ -908,19 +892,7 @@
       },
       {
         "provider": "sensenova",
-        "id": "deepseek-flash"
-      },
-      {
-        "provider": "sensenova",
         "id": "deepseek-v4-flash"
-      },
-      {
-        "provider": "sensenova",
-        "id": "deepseek-v4-pro"
-      },
-      {
-        "provider": "sensenova",
-        "id": "deepseek-v4.1-flash"
       },
       {
         "provider": "sensenova",
@@ -928,11 +900,7 @@
       },
       {
         "provider": "sensenova",
-        "id": "kimi-k3"
-      },
-      {
-        "provider": "sensenova",
-        "id": "sensenova-6.8-flash-lite"
+        "id": "sensenova-6.7-flash-lite"
       },
       {
         "provider": "cerebras",
@@ -961,10 +929,6 @@
       {
         "provider": "sambanova",
         "id": "Meta-Llama-3.3-70B-Instruct"
-      },
-      {
-        "provider": "sambanova",
-        "id": "MiniMax-M2.7"
       },
       {
         "provider": "sambanova",
