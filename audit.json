@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-02",
-  "generatedAt": "2026-10-02T01:47:50.729Z",
-  "totalModels": 112,
+  "date": "2026-10-05",
+  "generatedAt": "2026-10-05T01:12:48.482Z",
+  "totalModels": 116,
   "providers": [
     {
       "id": "nvidia",
@@ -376,23 +376,43 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 3,
+      "count": 7,
       "error": null,
       "models": [
         {
+          "id": "deepseek-flash",
+          "displayName": "deepseek-flash",
+          "contextWindow": null
+        },
+        {
           "id": "deepseek-v4-flash",
           "displayName": "deepseek-v4-flash",
-          "contextWindow": 1048576
+          "contextWindow": null
+        },
+        {
+          "id": "deepseek-v4-pro",
+          "displayName": "deepseek-v4-pro",
+          "contextWindow": null
+        },
+        {
+          "id": "deepseek-v4.1-flash",
+          "displayName": "deepseek-v4.1-flash",
+          "contextWindow": null
         },
         {
           "id": "glm-5.2",
           "displayName": "glm-5.2",
-          "contextWindow": 1048576
+          "contextWindow": null
         },
         {
-          "id": "sensenova-6.7-flash-lite",
-          "displayName": "sensenova-6.7-flash-lite",
-          "contextWindow": 262144
+          "id": "kimi-k3",
+          "displayName": "kimi-k3",
+          "contextWindow": null
+        },
+        {
+          "id": "sensenova-6.8-flash-lite",
+          "displayName": "sensenova-6.8-flash-lite",
+          "contextWindow": null
         }
       ]
     },
@@ -684,7 +704,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-09-29",
+    "comparedWith": "2026-10-02",
     "added": [
       {
         "provider": "nvidia",
@@ -892,7 +912,19 @@
       },
       {
         "provider": "sensenova",
+        "id": "deepseek-flash"
+      },
+      {
+        "provider": "sensenova",
         "id": "deepseek-v4-flash"
+      },
+      {
+        "provider": "sensenova",
+        "id": "deepseek-v4-pro"
+      },
+      {
+        "provider": "sensenova",
+        "id": "deepseek-v4.1-flash"
       },
       {
         "provider": "sensenova",
@@ -900,7 +932,11 @@
       },
       {
         "provider": "sensenova",
-        "id": "sensenova-6.7-flash-lite"
+        "id": "kimi-k3"
+      },
+      {
+        "provider": "sensenova",
+        "id": "sensenova-6.8-flash-lite"
       },
       {
         "provider": "cerebras",
