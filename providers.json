@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-05",
+  "audited_at": "2026-10-08",
   "providers": [
     {
       "id": "2d06tu",
@@ -18,7 +18,6 @@
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
         "nvidia/nemotron-3-super-120b-a12b",
         "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/riva-translate-4b-instruct-v1.1",
         "openai/gpt-oss-20b"
       ]
     },
@@ -133,10 +132,6 @@
         },
         {
           "name": "poolside/laguna-xs-2.1:free",
-          "context_window": 262144
-        },
-        {
-          "name": "qwen/qwen3.8-27b:free",
           "context_window": 262144
         },
         {

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-05",
-  "generatedAt": "2026-10-05T01:12:48.482Z",
-  "totalModels": 116,
+  "date": "2026-10-08",
+  "generatedAt": "2026-10-08T02:14:07.236Z",
+  "totalModels": 114,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 10,
+      "count": 9,
       "error": null,
       "models": [
         {
@@ -48,11 +48,6 @@
         {
           "id": "nvidia/nemotron-3-ultra-550b-a55b",
           "displayName": "nvidia/nemotron-3-ultra-550b-a55b",
-          "contextWindow": null
-        },
-        {
-          "id": "nvidia/riva-translate-4b-instruct-v1.1",
-          "displayName": "nvidia/riva-translate-4b-instruct-v1.1",
           "contextWindow": null
         },
         {
@@ -151,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 17,
+      "count": 16,
       "error": null,
       "models": [
         {
@@ -222,11 +217,6 @@
         {
           "id": "poolside/laguna-xs-2.1:free",
           "displayName": "Poolside: Laguna XS 2.1 (free)",
-          "contextWindow": 262144
-        },
-        {
-          "id": "qwen/qwen3.8-27b:free",
-          "displayName": "Qwen: Qwen3.8 27B (free)",
           "contextWindow": 262144
         },
         {
@@ -704,7 +694,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-02",
+    "comparedWith": "2026-10-05",
     "added": [
       {
         "provider": "nvidia",
@@ -737,10 +727,6 @@
       {
         "provider": "nvidia",
         "id": "nvidia/nemotron-3-ultra-550b-a55b"
-      },
-      {
-        "provider": "nvidia",
-        "id": "nvidia/riva-translate-4b-instruct-v1.1"
       },
       {
         "provider": "nvidia",
@@ -857,10 +843,6 @@
       {
         "provider": "openrouter",
         "id": "poolside/laguna-xs-2.1:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "qwen/qwen3.8-27b:free"
       },
       {
         "provider": "openrouter",
