@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-08",
+  "audited_at": "2026-10-11",
   "providers": [
     {
       "id": "2d06tu",
@@ -96,10 +96,6 @@
         },
         {
           "name": "google/gemma-4-31b-it:free",
-          "context_window": 262144
-        },
-        {
-          "name": "inclusionai/ling-3.0-flash-sante:free",
           "context_window": 262144
         },
         {
@@ -245,7 +241,6 @@
       "models": [
         "deepseek-flash",
         "deepseek-v4-flash",
-        "deepseek-v4-pro",
         "deepseek-v4.1-flash",
         "glm-5.2",
         "kimi-k3",

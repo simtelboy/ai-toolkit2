@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-08",
-  "generatedAt": "2026-10-08T02:14:07.236Z",
-  "totalModels": 114,
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11T01:12:26.883Z",
+  "totalModels": 112,
   "providers": [
     {
       "id": "nvidia",
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 16,
+      "count": 15,
       "error": null,
       "models": [
         {
@@ -172,11 +172,6 @@
         {
           "id": "google/gemma-4-31b-it:free",
           "displayName": "Google: Gemma 4 31B (free)",
-          "contextWindow": 262144
-        },
-        {
-          "id": "inclusionai/ling-3.0-flash-sante:free",
-          "displayName": "inclusionAI: Ling 3.0 Flash Sante (free)",
           "contextWindow": 262144
         },
         {
@@ -366,7 +361,7 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 7,
+      "count": 6,
       "error": null,
       "models": [
         {
@@ -377,11 +372,6 @@
         {
           "id": "deepseek-v4-flash",
           "displayName": "deepseek-v4-flash",
-          "contextWindow": null
-        },
-        {
-          "id": "deepseek-v4-pro",
-          "displayName": "deepseek-v4-pro",
           "contextWindow": null
         },
         {
@@ -694,7 +684,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-05",
+    "comparedWith": "2026-10-08",
     "added": [
       {
         "provider": "nvidia",
@@ -810,10 +800,6 @@
       },
       {
         "provider": "openrouter",
-        "id": "inclusionai/ling-3.0-flash-sante:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
       },
       {
@@ -899,10 +885,6 @@
       {
         "provider": "sensenova",
         "id": "deepseek-v4-flash"
-      },
-      {
-        "provider": "sensenova",
-        "id": "deepseek-v4-pro"
       },
       {
         "provider": "sensenova",
