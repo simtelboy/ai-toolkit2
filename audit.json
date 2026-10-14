@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-11",
-  "generatedAt": "2026-10-11T01:12:26.883Z",
-  "totalModels": 112,
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-14T01:21:29.932Z",
+  "totalModels": 111,
   "providers": [
     {
       "id": "nvidia",
@@ -146,14 +146,9 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 15,
+      "count": 14,
       "error": null,
       "models": [
-        {
-          "id": "apodex/apodex-1.1-mini:free",
-          "displayName": "Apodex: Apodex 1.1 Mini (free)",
-          "contextWindow": 262144
-        },
         {
           "id": "cohere/north-mini-code:free",
           "displayName": "Cohere: North Mini Code (free)",
@@ -263,7 +258,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 135 entries but none matched the free whitelist",
+      "error": "fetch failed",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -684,7 +679,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-08",
+    "comparedWith": "2026-10-11",
     "added": [
       {
         "provider": "nvidia",
@@ -777,10 +772,6 @@
       {
         "provider": "gemini",
         "id": "gemma-4-31b-it"
-      },
-      {
-        "provider": "openrouter",
-        "id": "apodex/apodex-1.1-mini:free"
       },
       {
         "provider": "openrouter",
