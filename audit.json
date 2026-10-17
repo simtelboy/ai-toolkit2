@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-14",
-  "generatedAt": "2026-10-14T01:21:29.932Z",
-  "totalModels": 111,
+  "date": "2026-10-17",
+  "generatedAt": "2026-10-17T00:44:25.254Z",
+  "totalModels": 112,
   "providers": [
     {
       "id": "nvidia",
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 14,
+      "count": 16,
       "error": null,
       "models": [
         {
@@ -195,6 +195,11 @@
           "contextWindow": 1000000
         },
         {
+          "id": "nvidia/nemotron-3.5-super-vl:free",
+          "displayName": "NVIDIA: Nemotron 3.5 Super VL (free)",
+          "contextWindow": 1000000
+        },
+        {
           "id": "openrouter/free",
           "displayName": "Free Models Router",
           "contextWindow": 200000
@@ -218,6 +223,11 @@
           "id": "thinkingmachines/inkling:free",
           "displayName": "Thinking Machines: Inkling (free)",
           "contextWindow": 1048576
+        },
+        {
+          "id": "xingchen-agi/xing4.0-29b-a4b:free",
+          "displayName": "XingChen: Xing4.0 29B A4B (free)",
+          "contextWindow": 262144
         }
       ]
     },
@@ -258,7 +268,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "fetch failed",
+      "error": "volcengine list models returned 135 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -450,7 +460,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 43,
+      "count": 42,
       "error": null,
       "models": [
         {
@@ -584,11 +594,6 @@
           "contextWindow": null
         },
         {
-          "id": "mistral-ocr-4-0",
-          "displayName": "mistral-ocr-4-0",
-          "contextWindow": null
-        },
-        {
           "id": "mistral-ocr-4-1",
           "displayName": "mistral-ocr-4-1",
           "contextWindow": null
@@ -679,7 +684,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-11",
+    "comparedWith": "2026-10-14",
     "added": [
       {
         "provider": "nvidia",
@@ -811,6 +816,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "nvidia/nemotron-3.5-super-vl:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "openrouter/free"
       },
       {
@@ -828,6 +837,10 @@
       {
         "provider": "openrouter",
         "id": "thinkingmachines/inkling:free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "xingchen-agi/xing4.0-29b-a4b:free"
       },
       {
         "provider": "siliconflow",
@@ -1028,10 +1041,6 @@
       {
         "provider": "mistral",
         "id": "mistral-ocr-4"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-ocr-4-0"
       },
       {
         "provider": "mistral",

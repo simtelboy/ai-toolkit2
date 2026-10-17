@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-14",
+  "audited_at": "2026-10-17",
   "providers": [
     {
       "id": "2d06tu",
@@ -115,6 +115,10 @@
           "context_window": 1000000
         },
         {
+          "name": "nvidia/nemotron-3.5-super-vl:free",
+          "context_window": 1000000
+        },
+        {
           "name": "openrouter/free",
           "context_window": 200000
         },
@@ -133,6 +137,10 @@
         {
           "name": "thinkingmachines/inkling:free",
           "context_window": 1048576
+        },
+        {
+          "name": "xingchen-agi/xing4.0-29b-a4b:free",
+          "context_window": 262144
         }
       ]
     },
@@ -305,7 +313,6 @@
         "mistral-ocr-3",
         "mistral-ocr-3-0",
         "mistral-ocr-4",
-        "mistral-ocr-4-0",
         "mistral-ocr-4-1",
         "mistral-ocr-latest",
         "mistral-small-2603",
