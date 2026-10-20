@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-17",
-  "generatedAt": "2026-10-17T00:44:25.254Z",
-  "totalModels": 112,
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T01:12:38.273Z",
+  "totalModels": 113,
   "providers": [
     {
       "id": "nvidia",
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 16,
+      "count": 17,
       "error": null,
       "models": [
         {
@@ -173,6 +173,11 @@
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
+        },
+        {
+          "id": "minimax/minimax-m3.1-flash:free",
+          "displayName": "MiniMax: MiniMax M3.1 Flash (free)",
+          "contextWindow": 1000000
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -268,7 +273,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 135 entries but none matched the free whitelist",
+      "error": "volcengine list models returned 137 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -684,7 +689,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-14",
+    "comparedWith": "2026-10-17",
     "added": [
       {
         "provider": "nvidia",
@@ -797,6 +802,10 @@
       {
         "provider": "openrouter",
         "id": "liquid/lfm-2.5-2.6b:free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "minimax/minimax-m3.1-flash:free"
       },
       {
         "provider": "openrouter",

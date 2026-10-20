@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-17",
+  "audited_at": "2026-10-20",
   "providers": [
     {
       "id": "2d06tu",
@@ -97,6 +97,10 @@
         {
           "name": "liquid/lfm-2.5-2.6b:free",
           "context_window": 65536
+        },
+        {
+          "name": "minimax/minimax-m3.1-flash:free",
+          "context_window": 1000000
         },
         {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
