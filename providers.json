@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-23",
+  "audited_at": "2026-10-26",
   "providers": [
     {
       "id": "2d06tu",
@@ -280,7 +280,7 @@
         "gemma-4-31B-it",
         "gpt-oss-120b",
         "Meta-Llama-3.3-70B-Instruct",
-        "MiniMax-M3"
+        "MiniMax-M3.1-Flash"
       ]
     },
     {

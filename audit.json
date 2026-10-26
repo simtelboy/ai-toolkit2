@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-23",
-  "generatedAt": "2026-10-23T00:53:29.843Z",
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-26T00:39:54.820Z",
   "totalModels": 121,
   "providers": [
     {
@@ -273,7 +273,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 137 entries but none matched the free whitelist",
+      "error": "volcengine list models returned 138 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -354,7 +354,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 131 entries but none had a free backend",
+      "error": "huggingface list models returned 130 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -456,8 +456,8 @@
           "contextWindow": null
         },
         {
-          "id": "MiniMax-M3",
-          "displayName": "MiniMax-M3",
+          "id": "MiniMax-M3.1-Flash",
+          "displayName": "MiniMax-M3.1-Flash",
           "contextWindow": null
         }
       ]
@@ -729,7 +729,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-20",
+    "comparedWith": "2026-10-23",
     "added": [
       {
         "provider": "nvidia",
@@ -977,7 +977,7 @@
       },
       {
         "provider": "sambanova",
-        "id": "MiniMax-M3"
+        "id": "MiniMax-M3.1-Flash"
       },
       {
         "provider": "mistral",
