@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-26",
+  "audited_at": "2026-10-29",
   "providers": [
     {
       "id": "2d06tu",
@@ -101,10 +101,6 @@
         {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
           "context_window": 256000
-        },
-        {
-          "name": "nvidia/nemotron-3-super-120b-a12b:free",
-          "context_window": 262144
         },
         {
           "name": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -213,7 +209,7 @@
       "base_url": "https://api.cohere.ai/compatibility/v1",
       "api_type": "openai",
       "register_url": "https://dashboard.cohere.com/welcome/register",
-      "status": "ok",
+      "status": "error",
       "models": [
         {
           "name": "north-mini-code-1-0",

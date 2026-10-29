@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-26",
-  "generatedAt": "2026-10-26T00:39:54.820Z",
-  "totalModels": 121,
+  "date": "2026-10-29",
+  "generatedAt": "2026-10-29T01:55:33.335Z",
+  "totalModels": 120,
   "providers": [
     {
       "id": "nvidia",
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 17,
+      "count": 16,
       "error": null,
       "models": [
         {
@@ -178,11 +178,6 @@
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
           "displayName": "NVIDIA: Nemotron 3 Nano Omni (free)",
           "contextWindow": 256000
-        },
-        {
-          "id": "nvidia/nemotron-3-super-120b-a12b:free",
-          "displayName": "NVIDIA: Nemotron 3 Super (free)",
-          "contextWindow": 262144
         },
         {
           "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -273,7 +268,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 138 entries but none matched the free whitelist",
+      "error": "fetch failed",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -339,9 +334,9 @@
     },
     {
       "id": "cohere",
-      "status": "ok",
+      "status": "error",
       "count": 1,
-      "error": null,
+      "error": "cohere list models returned 37 entries but none matched the free whitelist",
       "models": [
         {
           "id": "north-mini-code-1-0",
@@ -354,7 +349,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 130 entries but none had a free backend",
+      "error": "huggingface list models returned 136 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -729,7 +724,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-23",
+    "comparedWith": "2026-10-26",
     "added": [
       {
         "provider": "nvidia",
@@ -849,10 +844,6 @@
       },
       {
         "provider": "openrouter",
-        "id": "nvidia/nemotron-3-super-120b-a12b:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "nvidia/nemotron-3-ultra-550b-a55b:free"
       },
       {
@@ -918,10 +909,6 @@
       {
         "provider": "zhipu",
         "id": "glm-4.7-flash"
-      },
-      {
-        "provider": "cohere",
-        "id": "north-mini-code-1-0"
       },
       {
         "provider": "sensenova",
