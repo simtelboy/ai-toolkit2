@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-10-29",
+  "audited_at": "2026-11-01",
   "providers": [
     {
       "id": "2d06tu",
@@ -117,14 +117,6 @@
         {
           "name": "openrouter/free",
           "context_window": 200000
-        },
-        {
-          "name": "poolside/laguna-s-2.1:free",
-          "context_window": 262144
-        },
-        {
-          "name": "poolside/laguna-xs-2.1:free",
-          "context_window": 262144
         },
         {
           "name": "recursive/flint-v1.0:free",
@@ -303,6 +295,8 @@
         "mistral-code-fim-latest",
         "mistral-code-latest",
         "mistral-embed",
+        "mistral-large-4",
+        "mistral-large-4-0",
         "mistral-medium",
         "mistral-medium-2604",
         "mistral-medium-3",

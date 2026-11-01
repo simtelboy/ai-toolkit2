@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-29",
-  "generatedAt": "2026-10-29T01:55:33.335Z",
+  "date": "2026-11-01",
+  "generatedAt": "2026-11-01T01:25:03.146Z",
   "totalModels": 120,
   "providers": [
     {
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 16,
+      "count": 14,
       "error": null,
       "models": [
         {
@@ -198,16 +198,6 @@
           "id": "openrouter/free",
           "displayName": "Free Models Router",
           "contextWindow": 200000
-        },
-        {
-          "id": "poolside/laguna-s-2.1:free",
-          "displayName": "Poolside: Laguna S 2.1 (free)",
-          "contextWindow": 262144
-        },
-        {
-          "id": "poolside/laguna-xs-2.1:free",
-          "displayName": "Poolside: Laguna XS 2.1 (free)",
-          "contextWindow": 262144
         },
         {
           "id": "recursive/flint-v1.0:free",
@@ -268,7 +258,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "fetch failed",
+      "error": "volcengine list models returned 138 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -349,7 +339,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 136 entries but none had a free backend",
+      "error": "huggingface list models returned 134 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -460,7 +450,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 50,
+      "count": 52,
       "error": null,
       "models": [
         {
@@ -541,6 +531,16 @@
         {
           "id": "mistral-embed",
           "displayName": "mistral-embed",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-large-4",
+          "displayName": "mistral-large-4",
+          "contextWindow": null
+        },
+        {
+          "id": "mistral-large-4-0",
+          "displayName": "mistral-large-4-0",
           "contextWindow": null
         },
         {
@@ -724,7 +724,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-26",
+    "comparedWith": "2026-10-29",
     "added": [
       {
         "provider": "nvidia",
@@ -857,14 +857,6 @@
       {
         "provider": "openrouter",
         "id": "openrouter/free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "poolside/laguna-s-2.1:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "poolside/laguna-xs-2.1:free"
       },
       {
         "provider": "openrouter",
@@ -1029,6 +1021,14 @@
       {
         "provider": "mistral",
         "id": "mistral-embed"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-large-4"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-large-4-0"
       },
       {
         "provider": "mistral",
