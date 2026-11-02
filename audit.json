@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-01",
-  "generatedAt": "2026-11-01T01:25:03.146Z",
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T01:46:12.996Z",
   "totalModels": 120,
   "providers": [
     {
@@ -258,7 +258,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "volcengine list models returned 138 entries but none matched the free whitelist",
+      "error": "fetch failed",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -339,7 +339,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 134 entries but none had a free backend",
+      "error": "huggingface list models returned 135 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -724,7 +724,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-10-29",
+    "comparedWith": "2026-11-01",
     "added": [
       {
         "provider": "nvidia",
