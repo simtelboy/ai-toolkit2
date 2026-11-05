@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-11-02",
+  "audited_at": "2026-11-05",
   "providers": [
     {
       "id": "2d06tu",
@@ -123,14 +123,6 @@
           "context_window": 262144
         },
         {
-          "name": "thinkingmachines/inkling-small:free",
-          "context_window": 1048576
-        },
-        {
-          "name": "thinkingmachines/inkling:free",
-          "context_window": 1048576
-        },
-        {
           "name": "xingchen-agi/xing4.0-29b-a4b:free",
           "context_window": 262144
         }
@@ -239,7 +231,9 @@
         "deepseek-v4-flash",
         "deepseek-v4.1-flash",
         "glm-5.2",
+        "glm-5.3",
         "kimi-k3",
+        "sensenova-6.8-flash",
         "sensenova-6.8-flash-lite"
       ]
     },
@@ -263,8 +257,6 @@
       "register_url": "https://cloud.sambanova.ai/",
       "status": "ok",
       "models": [
-        "DeepSeek-V3.1",
-        "DeepSeek-V3.2",
         "gemma-4-31B-it",
         "gpt-oss-120b",
         "Meta-Llama-3.3-70B-Instruct",

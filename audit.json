@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-02",
-  "generatedAt": "2026-11-02T01:46:12.996Z",
-  "totalModels": 120,
+  "date": "2026-11-05",
+  "generatedAt": "2026-11-05T02:43:28.861Z",
+  "totalModels": 118,
   "providers": [
     {
       "id": "nvidia",
@@ -146,7 +146,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 14,
+      "count": 12,
       "error": null,
       "models": [
         {
@@ -203,16 +203,6 @@
           "id": "recursive/flint-v1.0:free",
           "displayName": "Recursive: Flint (free)",
           "contextWindow": 262144
-        },
-        {
-          "id": "thinkingmachines/inkling-small:free",
-          "displayName": "Thinking Machines: Inkling Small (free)",
-          "contextWindow": 1048576
-        },
-        {
-          "id": "thinkingmachines/inkling:free",
-          "displayName": "Thinking Machines: Inkling (free)",
-          "contextWindow": 1048576
         },
         {
           "id": "xingchen-agi/xing4.0-29b-a4b:free",
@@ -339,7 +329,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 135 entries but none had a free backend",
+      "error": "huggingface list models returned 126 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -356,7 +346,7 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 6,
+      "count": 8,
       "error": null,
       "models": [
         {
@@ -380,8 +370,18 @@
           "contextWindow": null
         },
         {
+          "id": "glm-5.3",
+          "displayName": "glm-5.3",
+          "contextWindow": null
+        },
+        {
           "id": "kimi-k3",
           "displayName": "kimi-k3",
+          "contextWindow": null
+        },
+        {
+          "id": "sensenova-6.8-flash",
+          "displayName": "sensenova-6.8-flash",
           "contextWindow": null
         },
         {
@@ -412,19 +412,9 @@
     {
       "id": "sambanova",
       "status": "ok",
-      "count": 6,
+      "count": 4,
       "error": null,
       "models": [
-        {
-          "id": "DeepSeek-V3.1",
-          "displayName": "DeepSeek-V3.1",
-          "contextWindow": null
-        },
-        {
-          "id": "DeepSeek-V3.2",
-          "displayName": "DeepSeek-V3.2",
-          "contextWindow": null
-        },
         {
           "id": "gemma-4-31B-it",
           "displayName": "gemma-4-31B-it",
@@ -724,7 +714,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-11-01",
+    "comparedWith": "2026-11-02",
     "added": [
       {
         "provider": "nvidia",
@@ -864,14 +854,6 @@
       },
       {
         "provider": "openrouter",
-        "id": "thinkingmachines/inkling-small:free"
-      },
-      {
-        "provider": "openrouter",
-        "id": "thinkingmachines/inkling:free"
-      },
-      {
-        "provider": "openrouter",
         "id": "xingchen-agi/xing4.0-29b-a4b:free"
       },
       {
@@ -920,7 +902,15 @@
       },
       {
         "provider": "sensenova",
+        "id": "glm-5.3"
+      },
+      {
+        "provider": "sensenova",
         "id": "kimi-k3"
+      },
+      {
+        "provider": "sensenova",
+        "id": "sensenova-6.8-flash"
       },
       {
         "provider": "sensenova",
@@ -933,14 +923,6 @@
       {
         "provider": "cerebras",
         "id": "qwen-3.8-27b"
-      },
-      {
-        "provider": "sambanova",
-        "id": "DeepSeek-V3.1"
-      },
-      {
-        "provider": "sambanova",
-        "id": "DeepSeek-V3.2"
       },
       {
         "provider": "sambanova",
