@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-11-05",
+  "audited_at": "2026-11-08",
   "providers": [
     {
       "id": "2d06tu",
@@ -12,7 +12,6 @@
       "models": [
         "google/diffusiongemma-26b-a4b-it",
         "google/gemma-4-31b-it",
-        "meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-90b-vision-instruct",
         "nvidia/ising-calibration-1.5-31b",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -97,6 +96,10 @@
         {
           "name": "liquid/lfm-2.5-2.6b:free",
           "context_window": 65536
+        },
+        {
+          "name": "liquid/lfm-3-1.7b:free",
+          "context_window": 262144
         },
         {
           "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -229,7 +232,6 @@
       "models": [
         "deepseek-flash",
         "deepseek-v4-flash",
-        "deepseek-v4.1-flash",
         "glm-5.2",
         "glm-5.3",
         "kimi-k3",
@@ -258,6 +260,7 @@
       "status": "ok",
       "models": [
         "gemma-4-31B-it",
+        "GLM-5.3",
         "gpt-oss-120b",
         "Meta-Llama-3.3-70B-Instruct",
         "MiniMax-M3.1-Flash"

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-05",
-  "generatedAt": "2026-11-05T02:43:28.861Z",
+  "date": "2026-11-08",
+  "generatedAt": "2026-11-08T01:45:48.201Z",
   "totalModels": 118,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 9,
+      "count": 8,
       "error": null,
       "models": [
         {
@@ -18,11 +18,6 @@
         {
           "id": "google/gemma-4-31b-it",
           "displayName": "google/gemma-4-31b-it",
-          "contextWindow": null
-        },
-        {
-          "id": "meta/llama-3.2-11b-vision-instruct",
-          "displayName": "meta/llama-3.2-11b-vision-instruct",
           "contextWindow": null
         },
         {
@@ -146,7 +141,7 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 12,
+      "count": 13,
       "error": null,
       "models": [
         {
@@ -173,6 +168,11 @@
           "id": "liquid/lfm-2.5-2.6b:free",
           "displayName": "LiquidAI: LFM2.5-2.6B (free)",
           "contextWindow": 65536
+        },
+        {
+          "id": "liquid/lfm-3-1.7b:free",
+          "displayName": "LiquidAI: LFM3-1.7B (free)",
+          "contextWindow": 262144
         },
         {
           "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -329,7 +329,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 126 entries but none had a free backend",
+      "error": "huggingface list models returned 127 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -346,7 +346,7 @@
     {
       "id": "sensenova",
       "status": "ok",
-      "count": 8,
+      "count": 7,
       "error": null,
       "models": [
         {
@@ -357,11 +357,6 @@
         {
           "id": "deepseek-v4-flash",
           "displayName": "deepseek-v4-flash",
-          "contextWindow": null
-        },
-        {
-          "id": "deepseek-v4.1-flash",
-          "displayName": "deepseek-v4.1-flash",
           "contextWindow": null
         },
         {
@@ -412,12 +407,17 @@
     {
       "id": "sambanova",
       "status": "ok",
-      "count": 4,
+      "count": 5,
       "error": null,
       "models": [
         {
           "id": "gemma-4-31B-it",
           "displayName": "gemma-4-31B-it",
+          "contextWindow": null
+        },
+        {
+          "id": "GLM-5.3",
+          "displayName": "GLM-5.3",
           "contextWindow": null
         },
         {
@@ -714,7 +714,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-11-02",
+    "comparedWith": "2026-11-05",
     "added": [
       {
         "provider": "nvidia",
@@ -723,10 +723,6 @@
       {
         "provider": "nvidia",
         "id": "google/gemma-4-31b-it"
-      },
-      {
-        "provider": "nvidia",
-        "id": "meta/llama-3.2-11b-vision-instruct"
       },
       {
         "provider": "nvidia",
@@ -830,6 +826,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "liquid/lfm-3-1.7b:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
       },
       {
@@ -894,10 +894,6 @@
       },
       {
         "provider": "sensenova",
-        "id": "deepseek-v4.1-flash"
-      },
-      {
-        "provider": "sensenova",
         "id": "glm-5.2"
       },
       {
@@ -927,6 +923,10 @@
       {
         "provider": "sambanova",
         "id": "gemma-4-31B-it"
+      },
+      {
+        "provider": "sambanova",
+        "id": "GLM-5.3"
       },
       {
         "provider": "sambanova",
