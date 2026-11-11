@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-08",
-  "generatedAt": "2026-11-08T01:45:48.201Z",
+  "date": "2026-11-11",
+  "generatedAt": "2026-11-11T02:11:57.277Z",
   "totalModels": 118,
   "providers": [
     {
@@ -205,9 +205,9 @@
           "contextWindow": 262144
         },
         {
-          "id": "xingchen-agi/xing4.0-29b-a4b:free",
-          "displayName": "XingChen: Xing4.0 29B A4B (free)",
-          "contextWindow": 262144
+          "id": "thinkingmachines/inkling-2-small:free",
+          "displayName": "Thinking Machines: Inkling 2 Small (free)",
+          "contextWindow": 1048576
         }
       ]
     },
@@ -714,7 +714,7 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-11-05",
+    "comparedWith": "2026-11-08",
     "added": [
       {
         "provider": "nvidia",
@@ -854,7 +854,7 @@
       },
       {
         "provider": "openrouter",
-        "id": "xingchen-agi/xing4.0-29b-a4b:free"
+        "id": "thinkingmachines/inkling-2-small:free"
       },
       {
         "provider": "siliconflow",

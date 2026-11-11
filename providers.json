@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-11-08",
+  "audited_at": "2026-11-11",
   "providers": [
     {
       "id": "2d06tu",
@@ -126,8 +126,8 @@
           "context_window": 262144
         },
         {
-          "name": "xingchen-agi/xing4.0-29b-a4b:free",
-          "context_window": 262144
+          "name": "thinkingmachines/inkling-2-small:free",
+          "context_window": 1048576
         }
       ]
     },
