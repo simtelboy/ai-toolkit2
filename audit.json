@@ -1,20 +1,15 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-11",
-  "generatedAt": "2026-11-11T02:11:57.277Z",
-  "totalModels": 118,
+  "date": "2026-11-14",
+  "generatedAt": "2026-11-14T02:39:29.672Z",
+  "totalModels": 117,
   "providers": [
     {
       "id": "nvidia",
       "status": "ok",
-      "count": 8,
+      "count": 7,
       "error": null,
       "models": [
-        {
-          "id": "google/diffusiongemma-26b-a4b-it",
-          "displayName": "google/diffusiongemma-26b-a4b-it",
-          "contextWindow": null
-        },
         {
           "id": "google/gemma-4-31b-it",
           "displayName": "google/gemma-4-31b-it",
@@ -141,9 +136,14 @@
     {
       "id": "openrouter",
       "status": "ok",
-      "count": 13,
+      "count": 15,
       "error": null,
       "models": [
+        {
+          "id": "baidu/ernie-5.5-flash-preview:free",
+          "displayName": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+          "contextWindow": 1024000
+        },
         {
           "id": "cohere/north-mini-code:free",
           "displayName": "Cohere: North Mini Code (free)",
@@ -165,9 +165,9 @@
           "contextWindow": 262144
         },
         {
-          "id": "liquid/lfm-2.5-2.6b:free",
-          "displayName": "LiquidAI: LFM2.5-2.6B (free)",
-          "contextWindow": 65536
+          "id": "inclusionai/ling-3.2-flash:free",
+          "displayName": "inclusionAI: Ling 3.2 Flash (free)",
+          "contextWindow": 1048576
         },
         {
           "id": "liquid/lfm-3-1.7b:free",
@@ -198,6 +198,11 @@
           "id": "openrouter/free",
           "displayName": "Free Models Router",
           "contextWindow": 200000
+        },
+        {
+          "id": "particle-ai/particle-1:free",
+          "displayName": "Particle AI: Particle-1 (free)",
+          "contextWindow": 1048576
         },
         {
           "id": "recursive/flint-v1.0:free",
@@ -248,7 +253,7 @@
       "id": "volcengine",
       "status": "error",
       "count": 7,
-      "error": "fetch failed",
+      "error": "volcengine list models returned 54 entries but none matched the free whitelist",
       "models": [
         {
           "id": "doubao-lite-1.6-flash-20250415",
@@ -329,7 +334,7 @@
       "id": "huggingface",
       "status": "error",
       "count": 2,
-      "error": "huggingface list models returned 127 entries but none had a free backend",
+      "error": "huggingface list models returned 133 entries but none had a free backend",
       "models": [
         {
           "id": "prism-ml/Ternary-Bonsai-27B-AWQ-4bit",
@@ -440,7 +445,7 @@
     {
       "id": "mistral",
       "status": "ok",
-      "count": 52,
+      "count": 50,
       "error": null,
       "models": [
         {
@@ -521,16 +526,6 @@
         {
           "id": "mistral-embed",
           "displayName": "mistral-embed",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-large-4",
-          "displayName": "mistral-large-4",
-          "contextWindow": null
-        },
-        {
-          "id": "mistral-large-4-0",
-          "displayName": "mistral-large-4-0",
           "contextWindow": null
         },
         {
@@ -714,12 +709,8 @@
     }
   ],
   "changes": {
-    "comparedWith": "2026-11-08",
+    "comparedWith": "2026-11-11",
     "added": [
-      {
-        "provider": "nvidia",
-        "id": "google/diffusiongemma-26b-a4b-it"
-      },
       {
         "provider": "nvidia",
         "id": "google/gemma-4-31b-it"
@@ -806,6 +797,10 @@
       },
       {
         "provider": "openrouter",
+        "id": "baidu/ernie-5.5-flash-preview:free"
+      },
+      {
+        "provider": "openrouter",
         "id": "cohere/north-mini-code:free"
       },
       {
@@ -822,7 +817,7 @@
       },
       {
         "provider": "openrouter",
-        "id": "liquid/lfm-2.5-2.6b:free"
+        "id": "inclusionai/ling-3.2-flash:free"
       },
       {
         "provider": "openrouter",
@@ -847,6 +842,10 @@
       {
         "provider": "openrouter",
         "id": "openrouter/free"
+      },
+      {
+        "provider": "openrouter",
+        "id": "particle-ai/particle-1:free"
       },
       {
         "provider": "openrouter",
@@ -1003,14 +1002,6 @@
       {
         "provider": "mistral",
         "id": "mistral-embed"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-large-4"
-      },
-      {
-        "provider": "mistral",
-        "id": "mistral-large-4-0"
       },
       {
         "provider": "mistral",

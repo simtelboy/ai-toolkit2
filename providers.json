@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "audited_at": "2026-11-11",
+  "audited_at": "2026-11-14",
   "providers": [
     {
       "id": "2d06tu",
@@ -10,7 +10,6 @@
       "register_url": "https://build.nvidia.com/explore/discover?modal=signin",
       "status": "ok",
       "models": [
-        "google/diffusiongemma-26b-a4b-it",
         "google/gemma-4-31b-it",
         "meta/llama-3.2-90b-vision-instruct",
         "nvidia/ising-calibration-1.5-31b",
@@ -78,6 +77,10 @@
       "status": "ok",
       "models": [
         {
+          "name": "baidu/ernie-5.5-flash-preview:free",
+          "context_window": 1024000
+        },
+        {
           "name": "cohere/north-mini-code:free",
           "context_window": 256000
         },
@@ -94,8 +97,8 @@
           "context_window": 262144
         },
         {
-          "name": "liquid/lfm-2.5-2.6b:free",
-          "context_window": 65536
+          "name": "inclusionai/ling-3.2-flash:free",
+          "context_window": 1048576
         },
         {
           "name": "liquid/lfm-3-1.7b:free",
@@ -120,6 +123,10 @@
         {
           "name": "openrouter/free",
           "context_window": 200000
+        },
+        {
+          "name": "particle-ai/particle-1:free",
+          "context_window": 1048576
         },
         {
           "name": "recursive/flint-v1.0:free",
@@ -290,8 +297,6 @@
         "mistral-code-fim-latest",
         "mistral-code-latest",
         "mistral-embed",
-        "mistral-large-4",
-        "mistral-large-4-0",
         "mistral-medium",
         "mistral-medium-2604",
         "mistral-medium-3",
